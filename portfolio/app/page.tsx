@@ -29,7 +29,7 @@ const news = [
   },
   {
     date: "Apr 2026",
-    text: <>Founded Equile — sandboxed runtimes for AI agents.</>,
+    text: <>Founded Equile — the dry lab for AI scientists.</>,
   },
   {
     date: "Jan 2026",
@@ -75,9 +75,10 @@ const projects = [
     title: "Equile",
     text: (
       <>
-        Sandboxed agent runtimes: one session API across agent frameworks
-        (Claude Code, Codex, Cursor), tool/MCP I/O, snapshot pause/resume, and
-        scheduling — so agents can be deployed like model inference.
+        The dry lab for AI scientists: complete computing environments and
+        clusters where research agents run real computational studies — trusted
+        scientific codes, scheduled runs, and a record of how every result was
+        made.
       </>
     ),
     links: [{ label: "equile.tech", href: "https://equile.tech" }],
@@ -103,7 +104,7 @@ const experience = [
   {
     date: "Apr 2026 - Present",
     title: "Equile",
-    detail: "Founder · sandboxed agent runtimes and infrastructure",
+    detail: "Founder · the dry lab for AI scientists",
   },
   {
     date: "Nov 2025 - Mar 2026",
@@ -178,9 +179,9 @@ export default function Home() {
               <strong>Zhuo Xu</strong> and{" "}
               <strong>Prof. Masayoshi Tomizuka</strong> on robot-learning data,
               and with <strong>Prof. Avideh Zakhor</strong> on UAV perception.
-              Outside research, I build infrastructure for running AI agents as
-              the founder of{" "}
-              <ExternalLink href="https://equile.tech">Equile</ExternalLink>.
+              Outside research, I am the founder of{" "}
+              <ExternalLink href="https://equile.tech">Equile</ExternalLink> —
+              the dry lab for AI scientists.
             </p>
 
             <p className="interests-title">My current research interests:</p>
