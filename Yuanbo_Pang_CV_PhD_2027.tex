@@ -70,7 +70,7 @@
 \role{Robotics Research, Prof.\ Masayoshi Tomizuka's Lab, UC Berkeley}{2026 -- Present}
 \rolesub{Large-Scale Robot-Learning Data Benchmark --- mentored by Zhuo Xu}
 \begin{itemize}
-  \item Scoring dataset quality by downstream finetune uplift --- the $\Delta$ on each model's native benchmark (LIBERO, SimplerEnv, CALVIN) --- not proxy metrics; rankings stay consistent across ACT, Diffusion Policy, OpenVLA, $\pi_0$, and GR00T.
+  \item Built \texttt{roboqa}, a dataset-quality benchmark run at EgoDex scale (338K episodes, 829 h): three deliberately non-aggregated dimensions --- recording health, distribution diversity, and fixed-protocol trainability (FastWAM / ACT) --- with versioned measurement limits and every score published with full provenance (data fingerprint, measure versions, VLM judge, commit).
   \item Owning the agent-driven data layer: agents that audit annotation quality and auto-convert raw captures into the team's canonical, embodiment-tagged representation (egocentric human hand, parallel-jaw gripper, humanoid).
 \end{itemize}
 
@@ -81,7 +81,7 @@
 
 \section{Engineering Experience}
 
-\role{Founder, Equile --- ``The dry lab for AI scientists''}{Apr 2026 -- Present}
+\role{Founder, Equile --- ``The dry lab for AI scientists''}{Apr 2026 -- Oct 2026}
 \begin{itemize}
   \item Sole owner of the runtime and control plane: serverless hosting for agent harnesses (Claude Code, Codex, Cursor, Grok) --- isolated per-session sandboxes, multi-tenant packing that cuts per-agent compute $>$20$\times$, snapshot pause/resume, public SDK/CLI.
 \end{itemize}

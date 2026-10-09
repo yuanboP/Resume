@@ -102,7 +102,7 @@ const experience = [
     detail: "Research Assistant · Prof. Avideh Zakhor · UAV perception",
   },
   {
-    date: "Apr 2026 - Present",
+    date: "Apr 2026 - Oct 2026",
     title: "Equile",
     detail: "Founder · the dry lab for AI scientists",
   },
