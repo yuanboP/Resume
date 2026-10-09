@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f1eb">
+    <meta
+      name="description"
+      content="Yuanbo Pang is a UC Berkeley EECS researcher working on AI agents, evaluation, robot learning, and embodied intelligence."
+    >
+    <title>Yuanbo Pang | AI Agents &amp; Robotics</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top">Yuanbo Pang</a>
+      <nav aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#publication">Publication</a>
+        <a href="#experience">Experience</a>
+        <a class="nav-cv" href="assets/Yuanbo_Pang_CV.pdf">CV</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">UC Berkeley EECS &middot; Fall 2027 PhD Applicant</p>
+          <h1>Building and evaluating agents that can work in the real world.</h1>
+          <p class="lead">
+            I work at the intersection of <strong>AI agents, robot learning, and
+            embodied intelligence</strong>. My research focuses on the data,
+            environments, and evaluation systems needed to make long-horizon
+            agents capable and reliable.
+          </p>
+          <p class="bio">
+            I am an EECS undergraduate at UC Berkeley, where I work with
+            <strong>Prof. Dawn Song</strong> at Berkeley RDI/BAIR and am a
+            co-first author and core contributor to <em>Agents' Last Exam</em>
+            (ALE). I am also working with <strong>Zhuo Xu</strong> and
+            <strong>Prof. Masayoshi Tomizuka</strong> on a large-scale
+            robot-learning data benchmark, and with
+            <strong>Prof. Avideh Zakhor</strong> on UAV perception.
+          </p>
+          <div class="links">
+            <a class="button primary" href="mailto:yuanbopang@berkeley.edu">Email</a>
+            <a class="button" href="assets/Yuanbo_Pang_CV.pdf">Download CV</a>
+            <a class="button" href="https://github.com/yuanboP">GitHub</a>
+            <a class="button" href="https://www.linkedin.com/in/yuanbopang/">LinkedIn</a>
+          </div>
+        </div>
+        <aside class="research-note" aria-label="Research focus">
+          <span class="note-label">Research focus</span>
+          <ul>
+            <li>Long-horizon agent evaluation &amp; RLVR</li>
+            <li>Robot data &amp; embodied benchmarks</li>
+            <li>Vision-language-action systems</li>
+            <li>Multimodal and spatial perception</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section news">
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <h2>Recent</h2>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <time datetime="2026-08">2026</time>
+            <p>
+              Building a robot-learning data benchmark using large-scale
+              egocentric manipulation and interaction data.
+            </p>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-06">Jun 2026</time>
+            <p>
+              <em>Agents' Last Exam</em> is available on arXiv with an open
+              evaluation framework for long-horizon, real-world agent tasks.
+            </p>
+          </div>
+          <div class="news-item">
+            <time datetime="2026-01">Jan 2026</time>
+            <p>
+              A robot delivery system integrating VLA and agentic workflows
+              was demonstrated at CES 2026.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="research">
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <h2>Research</h2>
+        </div>
+        <div class="research-grid">
+          <article class="project featured">
+            <div class="project-top">
+              <span class="tag">Agent Evaluation &middot; RLVR</span>
+              <span class="project-index">A01</span>
+            </div>
+            <h3>Agents' Last Exam</h3>
+            <p>
+              A large-scale benchmark for measuring frontier agents on
+              long-horizon, economically valuable tasks. ALE covers
+              <strong>1K+ tasks across 55 subdomains and 13 industry
+              clusters</strong>, running agents in real OS environments and
+              scoring their outputs with automated evaluators.
+            </p>
+            <p>
+              I helped build the end-to-end benchmark and evaluation system:
+              executable task environments, computer-use and tool interfaces,
+              scalable execution, and programmatic graders that enable
+              verifiable rewards and RLVR.
+            </p>
+            <div class="project-links">
+              <a href="https://arxiv.org/abs/2606.05405">Paper</a>
+              <a href="https://agents-last-exam.org">Project</a>
+              <a href="https://github.com/rdi-berkeley/agents-last-exam">Code</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <span class="tag">Robot Learning &middot; Data</span>
+              <span class="project-index">R02</span>
+            </div>
+            <h3>Robot-Learning Data Benchmark</h3>
+            <p>
+              An ongoing effort with Zhuo Xu and Prof. Masayoshi Tomizuka to
+              build a large-scale benchmark for robot learning. I work on
+              cleaning and curating heterogeneous egocentric manipulation and
+              human-object interaction data, including
+              <strong>EgoVerse, EgoDex, and HOI4D</strong>.
+            </p>
+            <p>
+              The goal is to turn diverse human demonstrations into reliable,
+              usable resources for training and evaluating embodied systems.
+            </p>
+            <span class="status">Ongoing research</span>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <span class="tag">Computer Vision &middot; UAV</span>
+              <span class="project-index">V03</span>
+            </div>
+            <h3>UAV-to-UAV Detection &amp; Tracking</h3>
+            <p>
+              Research with Prof. Avideh Zakhor on
+              <strong>zero-shot UAV-to-UAV detection</strong> and multi-object
+              tracking under high-speed motion and strong ego-motion. I
+              develop PyTorch pipelines that integrate optical-flow-based
+              tracking with detection and tracking baselines.
+            </p>
+            <p>
+              This work targets reliable perception when objects are small,
+              motion is fast, and background dynamics are substantial.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/yuanboP/URAP2026">Code</a>
+              <span class="status">Targeting CVPR submission</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <span class="tag">Embodied Systems &middot; VLA</span>
+              <span class="project-index">E04</span>
+            </div>
+            <h3>Robot Delivery with VLA</h3>
+            <p>
+              At Starbot, I worked on integrating vision-language-action
+              models and agentic workflows for robot planning and control in
+              a real delivery system. The system was demonstrated at
+              <strong>CES 2026</strong>.
+            </p>
+            <p>
+              This experience connected foundation-model reasoning with the
+              constraints of embodied execution and deployment.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section publication" id="publication">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <h2>Selected Publication</h2>
+        </div>
+        <article class="paper">
+          <span class="paper-year">2026</span>
+          <div>
+            <h3>Agents' Last Exam</h3>
+            <p class="authors">
+              Yiyou Sun*, Xinyang Han*, Weichen Zhang*,
+              <strong>Yuanbo Pang*</strong>, Tianyu Wang*, et al.
+            </p>
+            <p class="venue">
+              arXiv:2606.05405 &middot; * core/equal contribution
+            </p>
+            <p>
+              A benchmark for evaluating AI agents on long-horizon,
+              economically valuable, real-world tasks with verifiable
+              outcomes.
+            </p>
+            <div class="project-links">
+              <a href="https://arxiv.org/abs/2606.05405">arXiv</a>
+              <a href="https://agents-last-exam.org">Website</a>
+              <a href="https://github.com/rdi-berkeley/agents-last-exam">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <h2>Experience</h2>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item">
+            <span class="date">2025 - Present</span>
+            <div>
+              <h3>Berkeley RDI / BAIR</h3>
+              <p>Research Assistant &middot; Prof. Dawn Song &middot; Agent evaluation and RLVR</p>
+            </div>
+          </article>
+          <article class="experience-item">
+            <span class="date">Current</span>
+            <div>
+              <h3>Robot-Learning Data Benchmark</h3>
+              <p>Robotics Research &middot; Zhuo Xu and Prof. Masayoshi Tomizuka</p>
+            </div>
+          </article>
+          <article class="experience-item">
+            <span class="date">2026 - Present</span>
+            <div>
+              <h3>UC Berkeley EECS URAP</h3>
+              <p>Research Assistant &middot; Prof. Avideh Zakhor &middot; UAV perception</p>
+            </div>
+          </article>
+          <article class="experience-item">
+            <span class="date">2026 - Present</span>
+            <div>
+              <h3>Equile</h3>
+              <p>Founding Engineer &middot; Sandboxed agent runtimes and infrastructure</p>
+            </div>
+          </article>
+          <article class="experience-item">
+            <span class="date">2025 - 2026</span>
+            <div>
+              <h3>Starbot</h3>
+              <p>Robotics AI Engineering Intern &middot; VLA and robot delivery</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section closing">
+        <p class="eyebrow">Get in touch</p>
+        <h2>I am applying for Fall 2027 PhD positions.</h2>
+        <p>
+          I am interested in research on foundation-model agents, robot
+          learning, embodied intelligence, and the data and evaluation systems
+          that connect them.
+        </p>
+        <a class="email-link" href="mailto:yuanbopang@berkeley.edu">yuanbopang@berkeley.edu</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>Yuanbo Pang</span>
+      <span>UC Berkeley EECS</span>
+      <span>Last updated August 2026</span>
+    </footer>
+  </body>
+</html>

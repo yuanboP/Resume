@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yuanbo Pang — Resume</title>
+  <style>
+    :root {
+      --ink: #111;
+      --muted: #444;
+      --line: #222;
+      --soft: #555;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: var(--ink);
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 10.5pt;
+      line-height: 1.28;
+      background: #fff;
+    }
+    .page {
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.45in 0.55in 0.4in;
+    }
+    h1 {
+      margin: 0;
+      font-size: 18pt;
+      letter-spacing: 0.04em;
+      text-align: center;
+      font-weight: 700;
+    }
+    .tagline {
+      text-align: center;
+      font-size: 9.5pt;
+      color: var(--muted);
+      margin: 2px 0 4px;
+      font-style: italic;
+    }
+    .contact {
+      text-align: center;
+      font-size: 9.5pt;
+      margin-bottom: 8px;
+    }
+    .contact a { color: inherit; text-decoration: none; border-bottom: 1px solid #999; }
+    .thesis {
+      font-size: 9pt;
+      color: var(--soft);
+      text-align: center;
+      margin: 0 0 10px;
+      padding: 0 0.2in;
+    }
+    h2 {
+      font-size: 11pt;
+      margin: 9px 0 4px;
+      padding-bottom: 1px;
+      border-bottom: 1px solid var(--line);
+      text-transform: none;
+      letter-spacing: 0.02em;
+      font-variant: small-caps;
+    }
+    .role {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-top: 5px;
+    }
+    .role .left { font-weight: 700; }
+    .role .right {
+      white-space: nowrap;
+      font-size: 9.5pt;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .sub {
+      font-size: 9.5pt;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 1px;
+    }
+    ul {
+      margin: 1px 0 3px;
+      padding-left: 1.1em;
+    }
+    li { margin: 0 0 1.5px; }
+    li::marker { color: #333; }
+    .edu-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 2px;
+    }
+    .edu-line .left strong { font-weight: 700; }
+    .edu-line .right {
+      white-space: nowrap;
+      font-size: 9.5pt;
+      color: var(--muted);
+    }
+    .skills p, .awards p {
+      margin: 2px 0;
+    }
+    .skills strong, .awards strong { font-weight: 700; }
+    .compact-proj {
+      margin: 2px 0;
+    }
+    .compact-proj strong { font-weight: 700; }
+    @media print {
+      body { font-size: 10pt; }
+      .page { padding: 0.4in 0.5in; max-width: none; }
+      a { text-decoration: none; border: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>YUANBO PANG</h1>
+    <div class="tagline">UC Berkeley EECS · Agent Systems &amp; Full-Stack Platform</div>
+    <div class="contact">
+      <a href="mailto:yuanbopang@gmail.com">yuanbopang@gmail.com</a>
+      · (+1) 408-460-7526
+      · <a href="https://www.linkedin.com/in/yuanbopang/">linkedin.com/in/yuanbopang</a>
+      · <a href="https://github.com/yuanboP">github.com/yuanboP</a>
+    </div>
+    <p class="thesis">
+      Agent products end-to-end: isolate control plane &amp; credentials from disposable runtimes;
+      ship agents as APIs, marketplaces, and desktop clients.
+    </p>
+
+    <h2>Education</h2>
+    <div class="edu-line">
+      <div class="left"><strong>University of California, Berkeley</strong> — B.S. EECS</div>
+      <div class="right">Fall 2025 – Spring 2027</div>
+    </div>
+    <div class="sub">Focus: systems, ML, LLM agents · CS 61B, CS 70, EECS 16A/B</div>
+    <div class="edu-line">
+      <div class="left"><strong>Stanford University (Summer)</strong> — CS 229: Machine Learning</div>
+      <div class="right">Summer 2025</div>
+    </div>
+    <div class="edu-line">
+      <div class="left"><strong>De Anza &amp; Foothill Colleges</strong> — A.S. Computer Science · GPA 4.0/4.0 · Phi Theta Kappa</div>
+      <div class="right">2023 – 2025</div>
+    </div>
+
+    <h2>Products</h2>
+
+    <div class="role">
+      <div class="left">Nodus — Sole Founder &amp; Engineer · Agent Control Plane</div>
+      <div class="right">2025 – Present</div>
+    </div>
+    <div class="sub">TypeScript, Hono, Postgres, Clerk, Modal, S3, WebSocket · @nodus-ai/sdk</div>
+    <ul>
+      <li><strong>Sole-designed and built</strong> a multi-tenant agent control plane for identity, encrypted provider auth bundles, session lifecycle, and sanitized event streams; cloud sandboxes (Modal) are disposable execution only.</li>
+      <li>Defined multi-harness contracts for Claude Code, Codex, and Grok (TUI/tmux vs headless, home restore, snapshot pause/resume) behind one session API.</li>
+      <li>Implemented secure credential isolation: short-lived auth sandboxes complete real OAuth/device login, export minimal provider homes, encrypt at rest, inject only at start/resume—never baked into images or CLI args.</li>
+      <li><strong>Sole-authored</strong> <code>@nodus-ai/sdk</code> + CLI (scoped workspace/agent keys, runs, pause/resume, artifacts, concurrency) with hashed API keys and server-side owner resolution.</li>
+      <li>Built durable background agent runs: queue + worker lease reclaim after crash (<code>FOR UPDATE SKIP LOCKED</code>), status machine, redacted resource metadata.</li>
+    </ul>
+
+    <div class="role">
+      <div class="left">Ludus — Co-founder · Multi-Agent Task Marketplace</div>
+      <div class="right">2025 – Present</div>
+    </div>
+    <div class="sub">with co-founders · YC applicant (Top ~10%) · a16z Speedrun (Round 2) · Hono, Postgres, Docker, GitHub App</div>
+    <ul>
+      <li>Co-founded an API-first marketplace: humans submit real web/code tasks; two agents run in isolated sandboxes; submitters vote; platform updates Elo and credits.</li>
+      <li>Built core loop—task packaging → dual-agent assignment → Docker-isolated runs → branch/PR + checks → vote—with full Prompt → Action → Result traces for replay.</li>
+      <li>Separated public controller API (auth, tasks, matches) from VM worker dispatch so execution scales independently of product traffic.</li>
+    </ul>
+
+    <div class="role">
+      <div class="left">OpenCache — Sole Builder · Multi-Engine AI Coding Desktop</div>
+      <div class="right">2025 – Present</div>
+    </div>
+    <div class="sub">Tauri 2, React 19, TypeScript, Rust</div>
+    <ul>
+      <li><strong>Independently designed and engineered</strong> multi-engine desktop client (Claude Code, Codex, OpenCode): workspaces, live tool/file cards, git/worktrees, context ledger, project memory.</li>
+      <li>Owned engine capability matrix / policy routing, Nodus runtime connectors, cost/budget visibility, and release quality gates (contracts, perf baselines, multi-platform packaging).</li>
+      <li>Evolved from open-source desktop AI-coding client lineage; sole builder driving OpenCache product architecture and release engineering.</li>
+    </ul>
+
+    <div class="role">
+      <div class="left">Context8 — Sole Founder · Agent Memory &amp; Hybrid Search API</div>
+      <div class="right">2025 – Present</div>
+    </div>
+    <div class="sub">FastAPI, Postgres/pgvector, Elasticsearch, Redis, Docker</div>
+    <ul>
+      <li><strong>Sole-built</strong> multi-tenant memory/search: JWT + API keys, hybrid BM25 + kNN retrieval, async workers; Docker Compose + ops runbooks; TanStack Start cloud UI.</li>
+    </ul>
+
+    <div class="role">
+      <div class="left">Lunix — Sole Creator · Web Desktop Shell</div>
+      <div class="right">2025 – Present</div>
+    </div>
+    <ul>
+      <li><strong>Sole-built</strong> browser desktop shell: window manager + dock apps as thin clients over remote agent / workspace / cloud browser (CDP) / terminal runtimes (Nodus-integrated).</li>
+    </ul>
+
+    <h2>Experience</h2>
+
+    <div class="role">
+      <div class="left">Software Engineering Intern, AI Platform — Geopogo</div>
+      <div class="right">Fall 2025</div>
+    </div>
+    <ul>
+      <li>Shipped production multimodal generation (Gemini + video) with React/TypeScript, FastAPI, Firebase auth, credit metering, and Vercel CI/CD.</li>
+    </ul>
+
+    <div class="role">
+      <div class="left">Research Assistant — UC Berkeley (PrismLab)</div>
+      <div class="right">Oct 2025 – Present</div>
+    </div>
+    <ul>
+      <li>Procedural task synthesis for LLM agent evaluation (tool use, planning, robustness); Docker eval envs with MCP and process-level rewards.</li>
+    </ul>
+
+    <div class="role">
+      <div class="left">Research Intern — Stevens Institute of Technology (Prof. Hao Wang)</div>
+      <div class="right">Jul 2024 – Present</div>
+    </div>
+    <ul>
+      <li>Personalized federated learning and differential privacy for local data protection and model personalization (PyTorch).</li>
+    </ul>
+
+    <h2>Selected Projects</h2>
+    <p class="compact-proj">
+      <strong>Mario Level Generator</strong> · HackMIT 2025 · Modal Sponsor Prize — sketch → playable levels (LLaVA, OpenCV, Modal H100, FastAPI, React).
+      &nbsp;|&nbsp;
+      <strong>Stud.ai</strong> · HackMIT 2024 · Smartest AI Agent — agent timelines + calendar scheduling (FastAPI / uAgents).
+    </p>
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <p><strong>Languages:</strong> TypeScript, Python, JavaScript, Rust, SQL, C++, Java</p>
+      <p><strong>Platform:</strong> Hono, Node.js, FastAPI, Postgres, Redis, WebSocket, Clerk, S3, Docker, Modal, Railway, Cloudflare, Vercel</p>
+      <p><strong>Agent systems:</strong> multi-provider harnesses, session orchestration, sandbox isolation, SDK/CLI productization, eval/marketplace loops, MCP</p>
+      <p><strong>Desktop / ML:</strong> Tauri 2, React 19, Vite, CDP · PyTorch, federated learning, DP, OpenCV, LLM APIs</p>
+    </div>
+
+    <h2>Awards &amp; Selection</h2>
+    <div class="awards">
+      <p><strong>Ludus:</strong> YC Top ~10% (not accepted); a16z Speedrun Round 2</p>
+      <p><strong>HackMIT:</strong> Modal Sponsor Prize (2025); Smartest AI Agent (2024) · <strong>HackDavis</strong> MLH Best Domain · <strong>CruzHacks</strong> Health 2nd · <strong>Hack for Impact</strong> Financial Transparency · Physics Olympiad Province First Prize (2022)</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -116,7 +116,7 @@ export default function Experience() {
       ],
       tags: ["AI Agents", "Chrome Extension", "FastAPI", "uAgents"],
       repoUrl: "https://github.com/andyjphu/studai-teacher-extension",
-      backendUrl: "https://github.com/PangYuanbo/MITHACK_Agent",
+      backendUrl: "https://github.com/yuanboP/MITHACK_Agent",
     },
     {
       title: "GetResearch",

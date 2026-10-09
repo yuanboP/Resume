@@ -45,7 +45,7 @@ const baseStyle = `<!doctype html>
       408-460-7526 |
       San Jose, CA |
       <a href="https://www.linkedin.com/in/yuanbopang/">linkedin.com/in/yuanbopang</a> |
-      <a href="https://github.com/PangYuanbo">github.com/PangYuanbo</a> |
+      <a href="https://github.com/yuanboP">github.com/yuanboP</a> |
       <a href="https://yuanbopang.pro">yuanbopang.pro</a>
     </div>`;
 

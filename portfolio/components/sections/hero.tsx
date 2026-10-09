@@ -79,7 +79,7 @@ export default function Hero() {
               asChild
             >
               <a
-                href="https://github.com/PangYuanbo"
+                href="https://github.com/yuanboP"
                 target="_blank"
                 rel="noopener noreferrer"
               >

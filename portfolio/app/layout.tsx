@@ -1,23 +1,59 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
+import { Fraunces } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const siteUrl = "https://www.yuanbopang.pro";
 
 export const metadata: Metadata = {
-  title: "Yuanbo Pang - UC Berkeley EECS Student",
-  description: "Portfolio of Yuanbo Pang - UC Berkeley EECS Student, Research Intern at Stevens Institute, specializing in Federated Learning and Privacy-Preserving AI",
-  keywords: ["Yuanbo Pang", "UC Berkeley", "EECS", "Machine Learning", "Federated Learning", "AI", "Research"],
+  metadataBase: new URL(siteUrl),
+  title: "Yuanbo Pang | AI Agents & Robotics",
+  description:
+    "Yuanbo Pang is a UC Berkeley EECS researcher working on AI agents, evaluation, robot learning, and embodied intelligence.",
+  keywords: [
+    "Yuanbo Pang",
+    "UC Berkeley",
+    "BAIR",
+    "Agents' Last Exam",
+    "ALE",
+    "AI agents",
+    "agent evaluation",
+    "RLVR",
+    "robot learning",
+    "embodied AI",
+    "robotics",
+  ],
+  authors: [{ name: "Yuanbo Pang" }],
+  creator: "Yuanbo Pang",
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    title: "Yuanbo Pang | AI Agents & Robotics",
+    description:
+      "UC Berkeley EECS researcher working on long-horizon AI agents, robot learning, and embodied intelligence.",
+    url: siteUrl,
+    siteName: "Yuanbo Pang",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Yuanbo Pang | AI Agents & Robotics",
+    description:
+      "UC Berkeley EECS researcher working on long-horizon AI agents, robot learning, and embodied intelligence.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -26,18 +62,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang="en" className={fraunces.variable}>
+      <body>
+        {children}
         <Analytics />
       </body>
     </html>

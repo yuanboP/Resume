@@ -1,0 +1,92 @@
+% Frontier-lab evals-focused resume (Anthropic / OpenAI eval teams)
+% Compile: tectonic Yuanbo_Pang_Resume_Evals.tex
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  pdfauthor={Yuanbo Pang},
+  pdftitle={Yuanbo Pang Resume — Agent Evaluation}
+}
+
+\titleformat{\section}
+  {\large\bfseries\raggedright}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newcommand{\role}[2]{%
+  \vspace{4pt}%
+  \noindent\textbf{#1}\hfill\textit{#2}\par
+}
+\newcommand{\rolesub}[1]{%
+  \noindent\textit{#1}\par\vspace{1pt}%
+}
+
+\setlist[itemize]{
+  leftmargin=1.15em,
+  itemsep=1.5pt,
+  parsep=0pt,
+  topsep=1.5pt,
+  partopsep=0pt
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries YUANBO PANG}\\[3pt]
+  {\large Agent Evaluation \& Post-Training Measurement}\\[3pt]
+  \href{mailto:yuanbopang@berkeley.edu}{yuanbopang@berkeley.edu}
+  $\;\cdot\;$ (+1) 408-460-7526
+  $\;\cdot\;$ \href{https://www.yuanbopang.pro}{yuanbopang.pro}
+  $\;\cdot\;$ \href{https://github.com/yuanboP}{GitHub}
+  $\;\cdot\;$ \href{https://www.linkedin.com/in/yuanbopang/}{LinkedIn}
+\end{center}
+
+\section{Summary}
+Co-first author of \textbf{Agents' Last Exam} (ALE): I build the task environments, automated evaluators, and verifiable-reward pipelines used to measure frontier agents, and run those evaluations with frontier model teams --- analyzing trajectories, investigating surprising results, and reporting failure modes back to the labs.
+
+\section{Education}
+\role{University of California, Berkeley --- B.S.\ EECS, GPA 3.762/4.0 (in-major 3.811)}{Expected Dec 2026}
+\role{Stanford University (Summer Session) --- CS 229: Machine Learning}{Summer 2025}
+
+\section{Experience}
+
+\role{Research Assistant, Berkeley RDI / BAIR (Prof.\ Dawn Song)}{Oct 2025 -- Present}
+\rolesub{Agents' Last Exam (ALE) --- co-first author \quad arXiv:2606.05405 \quad agents-last-exam.org}
+\begin{itemize}
+  \item Co-designed and built ALE's evaluation system: 1K+ expert-designed, long-horizon agent tasks across 55 subdomains, each packaged as an executable environment (\texttt{load}/\texttt{start}/\texttt{evaluate}) with programmatic graders --- no hand labels in the scoring loop.
+  \item Led the task pipeline and auto-scoring: cross-domain evaluators (hash, tabular, geometric, visual, behavioral) producing \textbf{verifiable rewards} usable for both measurement and RL post-training (RLVR); designed checks that keep graders trustworthy as tasks and models change.
+  \item Operate large-scale sandboxed evaluation on GCP (container/VM task runners), including computer-use tasks with browser/desktop automation; run ALE evaluations with frontier model teams (OpenAI, Anthropic, Meta TBD Lab, Qwen, Seed; under lab guidelines) --- analyzing agent trajectories, getting to the bottom of surprising results, and reporting failure modes back to the labs.
+  \item For ALE V2, building ultra-long-horizon tasks from large-scale production software, with a harness that evaluates \emph{teams} of agents: coordination, division of labor, and context handoff beyond single-agent benchmarks.
+\end{itemize}
+
+\role{Robotics Research, Prof.\ Masayoshi Tomizuka's Lab, UC Berkeley}{2026 -- Present}
+\rolesub{Robot-learning data benchmark --- measurement methodology}
+\begin{itemize}
+  \item Score dataset quality by downstream finetune uplift --- the $\Delta$ on each model's native benchmark (LIBERO, SimplerEnv, CALVIN) rather than proxy metrics; validated that rankings stay consistent across ACT, Diffusion Policy, OpenVLA, $\pi_0$, and GR00T.
+\end{itemize}
+
+\role{Co-founder \& CTO, Equile --- Agent Runtime / Sandbox Platform}{Apr 2026 -- Present}
+\begin{itemize}
+  \item Built the control plane for running agent harnesses (Claude Code, Codex, Cursor) in isolated per-session sandboxes with snapshot pause/resume and background scheduling --- the same infrastructure problems as operating an eval fleet: reproducible environments, atomic job claims, lease reclaim, live monitoring.
+\end{itemize}
+
+\section{Publications}
+\textbf{Agents' Last Exam.} Yiyou Sun\textsuperscript{*}, Xinyang Han\textsuperscript{*}, Weichen Zhang\textsuperscript{*}, \textbf{Yuanbo Pang}\textsuperscript{*}, et al., Dawn Song. \textit{Under review at NeurIPS 2026.} \href{https://arxiv.org/abs/2606.05405}{arXiv:2606.05405} \quad \#1 Paper of the Week, Hugging Face Daily Papers (Jun 2026). \quad(\textsuperscript{*}co-first author)\\[3pt]
+\textbf{ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments.} Hejia Geng\textsuperscript{*}, Zesen Huang\textsuperscript{*}, \ldots, \textbf{Yuanbo Pang}, et al. \href{https://arxiv.org/abs/2609.19134}{arXiv:2609.19134} \quad \#2 Paper of the Day, Hugging Face Daily Papers (Sep 2026).\\[3pt]
+\textbf{Agent's GameDev Exam.} Zonglin Di, Yinhe Wang, \textbf{Yuanbo Pang}, Yiyou Sun, et al., Dawn Song. \textit{Under double-blind review at ICLR 2027} --- agent evaluation in game development environments; author version available upon request.
+
+\section{Skills}
+\textbf{Evaluation:} benchmark \& task design, automated evaluators/verifiers, verifiable rewards (RLVR), agent trajectory analysis, sandboxed task environments, regression investigation\\[1pt]
+\textbf{Engineering:} Python (primary), PyTorch, TypeScript, Docker, GCP, Modal, Postgres, agent harnesses, tool-use \& MCP, Linux
+
+\end{document}

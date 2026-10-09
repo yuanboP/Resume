@@ -1,0 +1,106 @@
+% SDE-tilt — readable, content restored
+% Compile: tectonic Yuanbo_Pang_Resume_SDE.tex
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  pdfauthor={Yuanbo Pang},
+  pdftitle={Yuanbo Pang Resume SDE}
+}
+
+\titleformat{\section}
+  {\large\bfseries\raggedright}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+\newcommand{\role}[2]{%
+  \vspace{5pt}%
+  \noindent\textbf{#1}\hfill\textit{#2}\par
+}
+\newcommand{\rolesub}[1]{%
+  \noindent\textit{#1}\par\vspace{1pt}%
+}
+
+\setlist[itemize]{
+  leftmargin=1.15em,
+  itemsep=1.5pt,
+  parsep=0pt,
+  topsep=1.5pt,
+  partopsep=0pt
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries YUANBO PANG}\\[4pt]
+  {\large UC Berkeley EECS \quad$\vert$\quad Full-time Software Engineering (2026--2027)}\\[4pt]
+  \href{mailto:yuanbopang@gmail.com}{yuanbopang@gmail.com}
+  $\;\cdot\;$ (+1) 408-460-7526
+  $\;\cdot\;$ \href{https://www.linkedin.com/in/yuanbopang/}{LinkedIn}
+  $\;\cdot\;$ \href{https://github.com/yuanboP}{GitHub}
+\end{center}
+
+\section{Education}
+\role{University of California, Berkeley --- B.S.\ EECS, GPA 3.762/4.0 (in-major 3.811)}{Expected Dec 2026}
+\role{Stanford University (Summer) --- CS 229: Machine Learning}{Summer 2025}
+\role{De Anza \& Foothill Colleges --- A.S.\ Computer Science, GPA 4.0/4.0}{2023 -- 2025}
+
+\section{Skills}
+\textbf{Languages:} Python, C++, TypeScript, SQL\\[1pt]
+\textbf{Backend / Infra:} Node/Hono, FastAPI, REST, Postgres, Redis, WebSocket, Docker, Linux, CI/CD\\[1pt]
+\textbf{Distributed / Cloud:} GCP, Modal, concurrency/queues, sandbox isolation, AWS basics, Vercel\\[1pt]
+\textbf{Agentic systems:} agent frameworks/harnesses, tool-use \& MCP, browser/desktop automation\\[1pt]
+\textbf{Client:} React, Tauri
+
+\section{Experience}
+
+\role{Co-founder \& CTO, Equile --- Agent Runtime / Sandbox Platform}{Apr 2026 -- Present}
+\rolesub{equile.tech \quad TypeScript, Hono, Postgres, Modal, Docker}
+\begin{itemize}
+  \item Built the control plane for agentic workflows in isolated sandboxes: sessions, encrypted auth, event streams, and disposable Modal workers so agents can be scheduled like model inference.
+  \item Implemented multi-harness agent framework contracts (Claude Code, Codex, Cursor, Grok, custom Docker): one session API, workspace FS, tool/MCP I/O, snapshot pause/resume; auth never in images or CLI args.
+  \item Built background run scheduling (atomic claims, lease reclaim) and SDK/CLI so clients call sandboxed agents as an inference-style API, including desktop/local runtimes with cloud-compatible session semantics.
+\end{itemize}
+
+\role{Research Assistant, Berkeley RDI / BAIR (Prof.\ Dawn Song)}{Oct 2025 -- Present}
+\rolesub{Co-first author, Agents' Last Exam --- arXiv:2606.05405}
+\begin{itemize}
+  \item Co-first author of ALE: led the task pipeline and evaluation that convert expert agentic workflows into runnable VM tasks (\texttt{load}/\texttt{start}/\texttt{evaluate}), including computer-use with browser/desktop automation.
+  \item Ran sandboxed agent evaluation on GCP (container/VM task runners); collaborated with frontier model teams (OpenAI, Google Gemini, Meta TBD Lab) on agent eval via ALE (under lab guidelines).
+\end{itemize}
+
+\role{Software Engineering Intern, AI Platform --- Geopogo}{Fall 2025}
+\begin{itemize}
+  \item Shipped production multimodal generation: React/TypeScript, FastAPI, Gemini + video APIs, Firebase auth, credits, and Vercel CI/CD.
+\end{itemize}
+
+\role{Robotics AI Engineering Intern, Starbot}{Nov 2025 -- Mar 2026}
+\begin{itemize}
+  \item Led VLA + agentic workflow integration for robot planning/control; shipped computer-to-delivery stack; CES 2026 demo with international media coverage.
+\end{itemize}
+
+\role{URAP Research Assistant, Prof.\ Avideh Zakhor, UC Berkeley EECS}{Spring 2026 -- Present}
+\begin{itemize}
+  \item Built a PyTorch system for UAV-to-UAV tiny-object detection and multi-object tracking (YOLO, Action Bank, optical flow, SAM2-style tracking) with train/eval pipelines.
+\end{itemize}
+
+\section{Other Products}
+\textbf{Ludus} (co-founder): dual-agent framework marketplace on Docker, GitHub App PR/checks, vote/Elo ranking.\\[2pt]
+\textbf{OpenCache:} multi-engine AI coding desktop (Tauri/React) with Equile agent-framework connectors.\\[2pt]
+\textbf{Context8:} multi-tenant hybrid search/memory API for agent workflows (FastAPI, pgvector, Elasticsearch, Docker).
+
+\section{Awards}
+Co-first author, Agents' Last Exam (ALE), arXiv:2606.05405 (Prof.\ Dawn Song)\\[1pt]
+HackMIT Modal Sponsor Prize (2025); Smartest AI Agent (2024)
+
+\end{document}

@@ -24,8 +24,8 @@ export default function Contact() {
     {
       icon: Github,
       label: "GitHub",
-      value: "@PangYuanbo",
-      href: "https://github.com/PangYuanbo",
+      value: "@yuanboP",
+      href: "https://github.com/yuanboP",
       color: "text-gray-700 dark:text-gray-300",
     },
     {

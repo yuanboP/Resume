@@ -16,7 +16,7 @@
 - Critical form rule: "Are you authorized to work in the country where the job is located?" -> Yes
 - Critical form rule: "Will you now or in the future require sponsorship for employment visa status?" -> No, when the question means employer-provided work visa sponsorship
 - Form explanation if requested: Currently authorized to work through F-1 OPT/STEM OPT and does not need employer visa sponsorship; long-term permanent residency is expected through family-based green card process.
-- GPA: 3.728 if required by application form; do not include GPA on resume unless the form forces GPA entry
+- GPA: overall 3.762 / in-major 3.811. Use 3.762 when a form asks for a single "GPA"; label clearly when listing both. Do not include GPA on resume unless the form forces GPA entry
 - Expected graduation: December 2026
 - Graduation date rule: Use December 2026 / Dec 2026 when available. If a required graduation-date field only offers earlier fixed options such as December 2025 or May 2026 and has no custom/other option, do not submit with an incorrect date; mark the application for manual recheck.
 - Education primary: University of California - Berkeley / UC Berkeley, Bachelor's Degree, Electrical Engineering and Computer Sciences (EECS), August 2025 - December 2026
@@ -27,5 +27,5 @@
 - Confirmed additional technical skills: AWS, Cloudflare, Railway, GraphQL, Redis, WebSockets, CUDA.
 - Agentic development tools used long-term: Claude Code, Codex, Cursor, Grok, Droid.
 - LinkedIn: https://www.linkedin.com/in/yuanbopang/
-- GitHub: https://github.com/PangYuanbo
+- GitHub: https://github.com/yuanboP
 - Website: https://yuanbopang.pro

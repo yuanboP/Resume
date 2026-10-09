@@ -1,0 +1,148 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper,margin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+
+\definecolor{navy}{HTML}{17324D}
+\definecolor{blue}{HTML}{176B87}
+\definecolor{orange}{HTML}{B85C38}
+\definecolor{ink}{HTML}{263442}
+\definecolor{muted}{HTML}{596775}
+\definecolor{light}{HTML}{F2F6F8}
+\definecolor{line}{HTML}{D8E2E8}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=15pt,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\sectionhead}[1]{%
+  \vspace{3pt}{\color{blue}\large\bfseries #1}\par
+  {\color{line}\rule{\linewidth}{0.7pt}}\vspace{1pt}
+}
+
+\newcommand{\metric}[2]{%
+  \begin{minipage}[t]{0.235\linewidth}
+    \centering
+    {\color{navy}\fontsize{18}{19}\selectfont\bfseries #1}\par
+    \vspace{1pt}
+    {\color{muted}\scriptsize #2}
+  \end{minipage}
+}
+
+\begin{document}
+\color{ink}
+
+{\color{navy}\fontsize{21}{23}\selectfont\bfseries
+Passing Tests, Missing Budgets}\par
+\vspace{1pt}
+{\color{blue}\large\bfseries
+TempO / RotCodeBench: Measuring Budget Blind Spots in Coding Agents}\par
+\vspace{3pt}
+{\small
+\textbf{Yuanbo Pang} \enspace\textbar\enspace UC Berkeley EECS
+\enspace\textbar\enspace Berkeley RDI/BAIR
+\hfill
+{\color{orange}\textbf{Ongoing work; manuscript under review. Please do not distribute.}}}
+
+\vspace{5pt}
+\colorbox{light}{%
+  \begin{minipage}{0.982\linewidth}
+  \vspace{4pt}
+  \textbf{\color{navy}Research question.}
+  A coding agent can complete a feature request and pass functional tests while
+  silently violating an existing performance contract. Can agents recognize
+  resource constraints that are \emph{implicit in the repository}, and can
+  execution traces and verifiable feedback help them act on those constraints?
+  \vspace{4pt}
+  \end{minipage}
+}
+
+\sectionhead{Benchmark and Evaluation}
+\textbf{RotCodeBench} is a challenge set of real, merged feature changes. Each
+task gives an agent only the pre-change repository and a
+\textbf{performance-silent functional request}. Hidden, rule-based black-box
+oracles first check functionality and then measure a task-specific cost
+contract, such as operation or render counts, allocations or bytes, network
+requests or writes, and, in two strongly separated cases, timing. The
+engineers' upstream patch establishes an attainable budget; a deliberately
+naive implementation validates that the oracle detects a regression.
+
+\vspace{3pt}
+\begin{center}
+\metric{17}{real-repository tasks}\hfill
+\metric{7}{programming languages}\hfill
+\metric{442}{configuration--task trials}\hfill
+\metric{8 / 26}{models / configurations}
+\end{center}
+\vspace{-2pt}
+
+Every output receives one of three interpretable verdicts:
+\textbf{\color{blue}efficient},
+\textbf{\color{orange}correct but over budget} (``performance rot''), or
+\textbf{functionally incorrect}. Most cost oracles use discrete, non-timing
+signals and \textbf{none uses an LLM judge}, making the resulting feedback
+auditable and suitable as a verifiable training signal.
+
+\sectionhead{Core Findings}
+\begin{itemize}
+  \item \textbf{Functional success does not imply budget awareness.}
+  Across the scored grid, \textbf{148 of 349 functionally correct solutions
+  (42\%)} exceed the calibrated performance budget; per-model rot rates range
+  from \textbf{23\% to 51\%}. Functional pass rates of 0.65--0.94 fall to
+  0.24--0.71 when the cost contract is also required.
+
+  \item \textbf{The primary failure is recognition, not retrieval.}
+  In a trajectory audit of all 148 cost-gap runs, agents reach the relevant
+  mechanism in \textbf{147/148} cases, but \textbf{145/148} contain no explicit
+  connection between that evidence and cost. Agents often see the right code
+  without recognizing the constraint it encodes.
+
+  \item \textbf{A minimal constraint cue substantially closes the gap.}
+  Adding one sentence that names the task-specific performance invariant,
+  without naming a file, API, metric, or implementation, reduces rot from
+  \textbf{46\% to 8\%} and raises efficient pass from \textbf{44\% to 67\%}
+  across 102 model--task pairs and four providers.
+\end{itemize}
+
+\sectionhead{From TempO to Budget-Aware Agents}
+\textbf{TempO} studies the complementary, execution-side question by mining
+Terminal-Bench trajectories for wasted tool-call time: repeated slow calls,
+over-waiting, under-wait churn, repeated errors, and redundant environment
+setup. Together, the two views distinguish \textbf{the cost of running the
+agent} from \textbf{the downstream cost of the artifact it produces}.
+
+\vspace{3pt}
+\colorbox{light}{%
+  \begin{minipage}{0.982\linewidth}
+  \vspace{4pt}
+  \textbf{\color{navy}Connection to BAGEN and agentic RL.}
+  BAGEN formalizes budget awareness as \emph{progressive interval estimation}:
+  from a partial rollout, an agent predicts bounds on its remaining resource
+  budget and alerts when completion is unlikely. A natural next step is to
+  apply this idea to coding-agent trajectories and jointly estimate
+  \textbf{execution cost, completion risk, and the eventual performance cost of
+  the generated patch}. RotCodeBench's rule-based oracles can supply
+  \textbf{verifiable rewards for RL/RLVR}, while TempO-style trajectory signals
+  can support earlier diagnosis and intervention.
+  \vspace{4pt}
+  \end{minipage}
+}
+
+\vspace{5pt}
+{\footnotesize\color{muted}
+\textbf{Relevant background.} At Berkeley RDI/BAIR, I am a co-first author and
+core contributor to \emph{Agents' Last Exam} (ALE, arXiv:2606.05405), where I
+help build scalable agent evaluation and programmatic evaluators that produce
+verifiable rewards for RLVR. \quad
+\textbf{BAGEN reference:} \emph{Are LLM Agents Budget-Aware?}
+(arXiv:2606.00198).
+}
+
+\end{document}
