@@ -71,7 +71,8 @@
 \rolesub{Large-Scale Robot-Learning Data Benchmark --- mentored by Zhuo Xu}
 \begin{itemize}
   \item Built \texttt{roboqa}, a dataset-quality benchmark run at EgoDex scale (338K episodes, 829 h): three deliberately non-aggregated dimensions --- recording health, distribution diversity, and fixed-protocol trainability (FastWAM / ACT) --- with versioned measurement limits and every score published with full provenance (data fingerprint, measure versions, VLM judge, commit).
-  \item Owning the agent-driven data layer: agents that audit annotation quality and auto-convert raw captures into the team's canonical, embodiment-tagged representation (egocentric human hand, parallel-jaw gripper, humanoid).
+  \item Owning the agent-driven data layer: agent workflows inside processing and annotation --- VLM-judged quality audits and auto-conversion of raw captures (HDF5, Zarr, RLDS, LeRobot) into the team's canonical, embodiment-tagged representation (egocentric hand, parallel-jaw gripper, humanoid).
+  \item Measure data by what it teaches: train and post-train VLA models on 500\,h of curated egocentric data, then score the resulting policies in simulation --- dataset quality read as downstream policy performance.
 \end{itemize}
 
 \role{URAP Research Assistant, Prof.\ Avideh Zakhor, UC Berkeley EECS}{Spring 2026 -- Present}

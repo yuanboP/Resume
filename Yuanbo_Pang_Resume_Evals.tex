@@ -63,21 +63,22 @@ Co-first author of \textbf{Agents' Last Exam} (ALE): I build the task environmen
 \role{Research Assistant, Berkeley RDI / BAIR (Prof.\ Dawn Song)}{Oct 2025 -- Present}
 \rolesub{Agents' Last Exam (ALE) --- co-first author \quad arXiv:2606.05405 \quad agents-last-exam.org}
 \begin{itemize}
-  \item Co-designed and built ALE's evaluation system: 1K+ expert-designed, long-horizon agent tasks across 55 subdomains, each packaged as an executable environment (\texttt{load}/\texttt{start}/\texttt{evaluate}) with programmatic graders --- no hand labels in the scoring loop.
-  \item Led the task pipeline and auto-scoring: cross-domain evaluators (hash, tabular, geometric, visual, behavioral) producing \textbf{verifiable rewards} usable for both measurement and RL post-training (RLVR); designed checks that keep graders trustworthy as tasks and models change.
+  \item Led the task pipeline and auto-scoring for ALE's 1K+ expert-designed, long-horizon tasks (55 subdomains), each an executable environment (\texttt{load}/\texttt{start}/\texttt{evaluate}) with programmatic graders --- cross-domain evaluators producing \textbf{verifiable rewards} for both measurement and RL post-training (RLVR), with checks that keep graders trustworthy as tasks and models change.
   \item Operate large-scale sandboxed evaluation on GCP (container/VM task runners), including computer-use tasks with browser/desktop automation; run ALE evaluations with frontier model teams (OpenAI, Anthropic, Meta TBD Lab, Qwen, Seed; under lab guidelines) --- analyzing agent trajectories, getting to the bottom of surprising results, and reporting failure modes back to the labs.
   \item For ALE V2, building ultra-long-horizon tasks from large-scale production software, with a harness that evaluates \emph{teams} of agents: coordination, division of labor, and context handoff beyond single-agent benchmarks.
 \end{itemize}
 
 \role{Robotics Research, Prof.\ Masayoshi Tomizuka's Lab, UC Berkeley}{2026 -- Present}
-\rolesub{Robot-learning data benchmark --- measurement methodology}
+\rolesub{Large-scale robot-learning data benchmark --- advised by Zhuo Xu and Prof.\ Tomizuka}
 \begin{itemize}
-  \item Built \texttt{roboqa}, a dataset-quality benchmark for robot/egocentric manipulation data, run at EgoDex scale (338K episodes, 829 h): three deliberately non-aggregated dimensions (recording health, distribution diversity, fixed-protocol trainability), versioned measurement limits, N/A-over-silence reporting, and every score published with full provenance --- data fingerprint, measure versions, VLM judge, and the commit that produced it.
+  \item Built \texttt{roboqa}, a dataset-quality benchmark for robot/egocentric manipulation data, run at EgoDex scale (338K episodes, 829 h): three deliberately non-aggregated dimensions (recording health, distribution diversity, fixed-protocol trainability), versioned measurement limits, and every score published with full provenance (data fingerprint, measure versions, VLM judge, commit).
+  \item Agent workflows run inside the data pipeline: VLM-judged annotation audits and automatic conversion of heterogeneous raw captures (HDF5, Zarr, RLDS, LeRobot) into a canonical, embodiment-tagged representation.
+  \item Measure data by what it teaches: train and post-train VLA models on 500\,h of curated egocentric data, then score the resulting policies in simulation --- dataset quality read as downstream policy performance.
 \end{itemize}
 
 \role{Founder, Equile --- The Dry Lab for AI Scientists}{Apr 2026 -- Oct 2026}
 \begin{itemize}
-  \item Building complete, reproducible computing environments where research agents run real computational studies (trusted scientific codes, scheduled cluster runs), with a provenance record for every result --- the same problems as operating an eval fleet: reproducible environments, job scheduling, live monitoring, trustworthy outputs.
+  \item Built reproducible computing environments where research agents run real computational studies, each result carrying a provenance record --- the same problems as operating an eval fleet: reproducibility, scheduling, monitoring, trustworthy outputs.
 \end{itemize}
 
 \section{Publications}
