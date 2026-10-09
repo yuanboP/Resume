@@ -71,9 +71,9 @@ Co-first author of \textbf{Agents' Last Exam} (ALE): I build the task environmen
 \role{Robotics Research, Prof.\ Masayoshi Tomizuka's Lab, UC Berkeley}{2026 -- Present}
 \rolesub{Large-scale robot-learning data benchmark --- advised by Zhuo Xu and Prof.\ Tomizuka}
 \begin{itemize}
-  \item Built \texttt{roboqa}, a dataset-quality benchmark for robot/egocentric manipulation data, run at EgoDex scale (338K episodes, 829 h): three deliberately non-aggregated dimensions (recording health, distribution diversity, fixed-protocol trainability), versioned measurement limits, and every score published with full provenance (data fingerprint, measure versions, VLM judge, commit).
-  \item Agent workflows run inside the data pipeline: VLM-judged annotation audits and automatic conversion of heterogeneous raw captures (HDF5, Zarr, RLDS, LeRobot) into a canonical, embodiment-tagged representation.
-  \item Measure data by what it teaches: train and post-train VLA models on 500\,h of curated egocentric data, then score the resulting policies in simulation --- dataset quality read as downstream policy performance.
+  \item Built \texttt{roboqa}: dataset-quality benchmark at EgoDex scale (338K episodes, 829 h) --- health, diversity, and trainability scored separately; every score published with full provenance.
+  \item Agent workflows inside the data pipeline: VLM-judged annotation audits; raw captures auto-converted to a canonical, embodiment-tagged format.
+  \item Train and post-train VLAs on 500\,h of curated data; score the resulting policies in simulation.
 \end{itemize}
 
 \role{Founder, Equile --- The Dry Lab for AI Scientists}{Apr 2026 -- Oct 2026}

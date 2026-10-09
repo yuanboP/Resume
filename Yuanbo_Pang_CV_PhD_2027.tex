@@ -70,9 +70,9 @@
 \role{Robotics Research, Prof.\ Masayoshi Tomizuka's Lab, UC Berkeley}{2026 -- Present}
 \rolesub{Large-Scale Robot-Learning Data Benchmark --- mentored by Zhuo Xu}
 \begin{itemize}
-  \item Built \texttt{roboqa}, a dataset-quality benchmark run at EgoDex scale (338K episodes, 829 h): three deliberately non-aggregated dimensions --- recording health, distribution diversity, and fixed-protocol trainability (FastWAM / ACT) --- with versioned measurement limits and every score published with full provenance (data fingerprint, measure versions, VLM judge, commit).
-  \item Owning the agent-driven data layer: agent workflows inside processing and annotation --- VLM-judged quality audits and auto-conversion of raw captures (HDF5, Zarr, RLDS, LeRobot) into the team's canonical, embodiment-tagged representation (egocentric hand, parallel-jaw gripper, humanoid).
-  \item Measure data by what it teaches: train and post-train VLA models on 500\,h of curated egocentric data, then score the resulting policies in simulation --- dataset quality read as downstream policy performance.
+  \item Built \texttt{roboqa}: dataset-quality benchmark at EgoDex scale (338K episodes, 829 h) --- health, diversity, and trainability scored separately; every score published with full provenance.
+  \item Agent workflows inside processing and annotation: VLM-judged quality audits; raw captures auto-converted to a canonical, embodiment-tagged format (egocentric hand, gripper, humanoid).
+  \item Train and post-train VLAs on 500\,h of curated data; score the resulting policies in simulation.
 \end{itemize}
 
 \role{URAP Research Assistant, Prof.\ Avideh Zakhor, UC Berkeley EECS}{Spring 2026 -- Present}
