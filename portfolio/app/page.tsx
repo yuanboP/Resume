@@ -148,8 +148,9 @@ export default function Home() {
       <main id="top">
         <section className="intro">
           <div className="portrait">
-            <div className="photo" aria-hidden="true">
-              YP
+            <div className="photo">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/photo.jpg" alt="Yuanbo Pang" />
             </div>
             <a className="email" href="mailto:yuanbopang@berkeley.edu">
               yuanbopang@berkeley.edu
