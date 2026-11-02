@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yuanbo Pang — Research Overview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7f0;
+    --band: #f3efe4;
+    --ink: #1f1d1a;
+    --muted: #6d675c;
+    --faint: #9a9284;
+    --blue: #1d64d8;
+    --mark: #ffe866;
+    --display: "Fraunces", Georgia, serif;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--bg);
+    background-image: radial-gradient(rgba(31,29,26,.045) 1px, transparent 1px);
+    background-size: 22px 22px;
+    color: var(--ink);
+    font-family: var(--font);
+    overflow: hidden;
+  }
+  .slide {
+    position: absolute; inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7vh 9vw;
+  }
+  .slide.active { display: flex; }
+  .eyebrow {
+    font-size: clamp(13px, 1.4vw, 17px);
+    font-weight: 700; color: var(--blue);
+    text-transform: uppercase; letter-spacing: .08em;
+    margin: 0 0 1.2vh;
+  }
+  h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(34px, 5.6vw, 72px);
+    line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 2vh;
+  }
+  h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(28px, 4vw, 52px);
+    line-height: 1.1; margin: 0 0 3.5vh;
+  }
+  p, li { font-size: clamp(16px, 1.75vw, 24px); line-height: 1.55; }
+  .sub { color: var(--muted); max-width: 62ch; }
+  mark { background: linear-gradient(to top, var(--mark) 0%, var(--mark) 40%, transparent 40%); padding: 0 2px; }
+  strong { font-weight: 650; }
+  ul.clean { list-style: none; padding: 0; margin: 0; }
+  ul.clean > li {
+    position: relative; padding-left: 1.4em; margin-bottom: 1.6vh;
+  }
+  ul.clean > li::before { content: "✶"; position: absolute; left: 0; color: var(--blue); }
+  ol.q { list-style: none; counter-reset: q; padding: 0; margin: 0; }
+  ol.q > li {
+    counter-increment: q; position: relative;
+    padding-left: 2.4em; margin-bottom: 2.6vh;
+  }
+  ol.q > li::before {
+    content: counter(q);
+    position: absolute; left: 0; top: .1em;
+    width: 1.5em; height: 1.5em;
+    border: 2px solid var(--ink); border-radius: 50%;
+    background: #fff; box-shadow: 2px 2px 0 var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .8em; font-weight: 700; transform: rotate(-4deg);
+  }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: start; }
+  .card {
+    background: #fff; border: 2px solid var(--ink); border-radius: 12px;
+    box-shadow: 4px 4px 0 var(--ink);
+    padding: 2.4vh 1.8vw; margin-bottom: 2.2vh;
+  }
+  .card h3 { font-family: var(--display); margin: 0 0 .8vh; font-size: clamp(18px, 2vw, 28px); }
+  .card p { margin: 0; font-size: clamp(14px, 1.5vw, 20px); color: var(--muted); }
+  .badge {
+    display: inline-block; padding: 2px 12px;
+    border: 2px solid var(--ink); border-radius: 999px;
+    background: var(--mark); box-shadow: 2px 2px 0 var(--ink);
+    font-size: clamp(12px, 1.3vw, 16px); font-weight: 700;
+    transform: rotate(-2deg); margin-right: 10px;
+  }
+  .footer-note { position: absolute; bottom: 4vh; left: 9vw; right: 9vw;
+    display: flex; justify-content: space-between;
+    font-size: 13px; color: var(--faint); }
+  .pagenum { position: absolute; bottom: 4vh; right: 4vw; font-size: 14px; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .polaroid {
+    width: clamp(150px, 14vw, 220px); border: 2px solid var(--ink); border-radius: 6px;
+    background: #fff; box-shadow: 6px 6px 0 rgba(31,29,26,.9);
+    transform: rotate(-2.5deg); overflow: hidden;
+  }
+  .polaroid img { width: 100%; display: block; }
+  .title-row { display: flex; gap: 5vw; align-items: center; }
+  .stat-row { display: flex; gap: 2.5vw; margin-top: 3vh; flex-wrap: wrap; }
+  .stat { border-left: 4px solid var(--blue); padding-left: 1.2vw; }
+  .stat .n { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 46px); line-height: 1; }
+  .stat .l { font-size: clamp(12px, 1.3vw, 16px); color: var(--muted); margin-top: .6vh; }
+  .flow { display: flex; align-items: center; gap: 1vw; flex-wrap: wrap; margin: 2vh 0; }
+  .flow .step {
+    background: #fff; border: 2px solid var(--ink); border-radius: 10px;
+    box-shadow: 3px 3px 0 var(--ink);
+    padding: 1.2vh 1.2vw; font-size: clamp(13px, 1.5vw, 19px); font-weight: 600;
+  }
+  .flow .arr { color: var(--faint); font-size: clamp(16px, 2vw, 26px); }
+  code { background: var(--band); border: 1px solid #e0dacb; border-radius: 5px; padding: 1px 7px; font-size: .85em; }
+  @page { size: 13.33in 7.5in; margin: 0; }
+  @media print {
+    body { overflow: visible; }
+    .slide { position: relative; display: flex !important; height: 100vh; page-break-after: always; }
+    .pagenum { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 1 · Title -->
+<section class="slide active">
+  <div class="title-row">
+    <div>
+      <p class="eyebrow">UC Berkeley EECS · Research Overview</p>
+      <h1>Building and evaluating agents for the <mark>real world</mark>.</h1>
+      <p class="sub"><strong>Yuanbo Pang</strong> &nbsp;·&nbsp; Berkeley RDI/BAIR (Prof. Dawn Song) &nbsp;·&nbsp; Tomizuka Lab &nbsp;·&nbsp; Founder, Equile</p>
+      <p class="sub" style="color:var(--faint)">yuanbopang@berkeley.edu · yuanbopang.pro</p>
+    </div>
+    <div class="polaroid"><img src="photo.jpg" alt="Yuanbo Pang"></div>
+  </div>
+</section>
+
+<!-- 2 · Three threads -->
+<section class="slide">
+  <p class="eyebrow">In one slide</p>
+  <h2>Three threads, one question: <br>can we trust what agents do?</h2>
+  <div class="cols">
+    <div>
+      <div class="card"><h3>Evaluate agents</h3><p>Agents' Last Exam — 1K+ executable tasks, automated graders, verifiable rewards. Co-first author.</p></div>
+      <div class="card"><h3>Evaluate data</h3><p>roboqa — what robot-learning data is worth, measured at EgoDex scale. Tomizuka Lab.</p></div>
+    </div>
+    <div>
+      <div class="card"><h3>Run agents as infrastructure</h3><p>Equile — reproducible computing environments with provenance for every result.</p></div>
+      <div class="card"><h3>Output</h3><p>2 preprints (HF #1 of week / #2 of day) + 1 under review at ICLR 2027.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · ALE -->
+<section class="slide">
+  <p class="eyebrow">Agents' Last Exam · arXiv:2606.05405 · under review, NeurIPS 2026</p>
+  <h2>Measuring frontier agents on work that matters.</h2>
+  <ul class="clean">
+    <li><strong>1K+ expert-designed, long-horizon tasks</strong> across 55 subdomains — real economic work, not puzzles.</li>
+    <li>Every task is an <strong>executable environment</strong>: <code>load / start / evaluate</code>, sandboxed VM, computer-use included.</li>
+    <li><strong>Programmatic graders</strong> — no hand labels in the scoring loop; scores double as <strong>verifiable rewards (RLVR)</strong>.</li>
+  </ul>
+  <div class="stat-row">
+    <div class="stat"><div class="n">1,000+</div><div class="l">executable tasks</div></div>
+    <div class="stat"><div class="n">55</div><div class="l">subdomains</div></div>
+    <div class="stat"><div class="n">#1</div><div class="l">HF paper of the week</div></div>
+    <div class="stat"><div class="n">310</div><div class="l">authors — I'm co-first</div></div>
+  </div>
+  <div class="footer-note"><span>My role: led the task pipeline and auto-scoring; run evals with frontier model teams.</span></div>
+</section>
+
+<!-- 4 · ALE how -->
+<section class="slide">
+  <p class="eyebrow">ALE · under the hood</p>
+  <h2>From expert workflow to trustworthy number.</h2>
+  <div class="flow">
+    <div class="step">Expert workflow</div><span class="arr">→</span>
+    <div class="step">Executable task env</div><span class="arr">→</span>
+    <div class="step">Agent rollout (sandboxed VM, GCP)</div><span class="arr">→</span>
+    <div class="step">Programmatic grader</div><span class="arr">→</span>
+    <div class="step">Score / reward</div>
+  </div>
+  <ul class="clean">
+    <li>Evaluator families: <strong>hash · tabular · geometric · visual · behavioral</strong> — picked per task, checked against drift.</li>
+    <li>Trajectory analysis: find <em>why</em> an agent failed, report failure modes back to the labs (OpenAI, Anthropic, Meta TBD, Qwen, Seed).</li>
+    <li>V2 (leading): <strong>3D/spatial environments</strong> (Blender, Isaac Lab) and <strong>ultra-long-horizon team-of-agents tasks</strong> from production software.</li>
+  </ul>
+</section>
+
+<!-- 5 · roboqa -->
+<section class="slide">
+  <p class="eyebrow">roboqa · Tomizuka Lab, advised by Zhuo Xu</p>
+  <h2>What is a robot dataset actually worth?</h2>
+  <ul class="clean">
+    <li>Three dimensions, <strong>never averaged</strong>: recording health · distribution diversity · trainability.</li>
+    <li><strong>Agent workflows inside the pipeline</strong>: VLM-judged annotation audits; raw captures auto-converted to a canonical, embodiment-tagged format.</li>
+    <li><strong>Train + post-train VLAs on 500 h</strong> of curated data; score the resulting policies in simulation.</li>
+    <li>Every score published with provenance: data fingerprint, measure versions, judge, commit.</li>
+  </ul>
+  <div class="stat-row">
+    <div class="stat"><div class="n">338K</div><div class="l">episodes (EgoDex)</div></div>
+    <div class="stat"><div class="n">829 h</div><div class="l">of egocentric data</div></div>
+    <div class="stat"><div class="n">500 h</div><div class="l">VLA train + post-train</div></div>
+  </div>
+</section>
+
+<!-- 6 · Other papers -->
+<section class="slide">
+  <p class="eyebrow">Also on the bench</p>
+  <h2>Environments are the common thread.</h2>
+  <div class="card">
+    <h3>ScienceIDE <span class="badge">HF #2 of the day</span></h3>
+    <p>Turning the world's scientific codebases into agent-learnable environments; trained PhAI-IDE model family on verified trajectories. arXiv:2609.19134.</p>
+  </div>
+  <div class="card">
+    <h3>Agent's GameDev Exam <span class="badge">ICLR 2027 · under review</span></h3>
+    <p>Agent evaluation in game-development environments — with Dawn Song's group.</p>
+  </div>
+  <div class="card">
+    <h3>Equile — "the dry lab for AI scientists"</h3>
+    <p>Founded Apr–Oct 2026. Reproducible computing environments + clusters for research agents; every result traceable to how it was made.</p>
+  </div>
+</section>
+
+<!-- 7 · Research questions -->
+<section class="slide">
+  <p class="eyebrow">Where this is going</p>
+  <h2>The questions I want to spend years on.</h2>
+  <ol class="q">
+    <li>Can we <mark>reliably evaluate long-horizon agents</mark> — evaluators whose verifiable rewards are strong enough to both <strong>measure</strong> frontier agents and <strong>train</strong> them?</li>
+    <li>What <mark>data</mark> do robots actually need? Can egocentric human demonstrations become as useful to robot learning as web text is to language models?</li>
+    <li>What does it take to run agents as <mark>real infrastructure</mark> — sandboxed, reproducible, schedulable — and how does that change how we study them?</li>
+  </ol>
+</section>
+
+<!-- 8 · Close -->
+<section class="slide">
+  <p class="eyebrow">Thank you</p>
+  <h2>Let's talk.</h2>
+  <p class="sub"><strong>Yuanbo Pang</strong> · UC Berkeley EECS '26</p>
+  <p class="sub">yuanbopang@berkeley.edu &nbsp;·&nbsp; yuanbopang.pro &nbsp;·&nbsp; github.com/yuanboP</p>
+  <p class="sub" style="color:var(--faint)">ALE: agents-last-exam.org · arXiv:2606.05405 / ScienceIDE: arXiv:2609.19134</p>
+</section>
+
+<div class="pagenum"><span id="cur">1</span> / <span id="total">8</span></div>
+
+<script>
+  const slides = [...document.querySelectorAll(".slide")];
+  document.getElementById("total").textContent = slides.length;
+  let i = 0;
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, k) => s.classList.toggle("active", k === i));
+    document.getElementById("cur").textContent = i + 1;
+  }
+  if (location.hash) show(parseInt(location.hash.slice(1)) || 0);
+  addEventListener("keydown", e => {
+    if (["ArrowRight", "ArrowDown", " ", "PageDown"].includes(e.key)) show(i + 1);
+    if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) show(i - 1);
+    if (e.key === "Home") show(0);
+    if (e.key === "End") show(slides.length - 1);
+  });
+  addEventListener("click", e => { if (!e.target.closest("a")) show(i + 1); });
+</script>
+</body>
+</html>
