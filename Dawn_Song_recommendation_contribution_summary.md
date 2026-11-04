@@ -59,10 +59,6 @@ the task specification and the verification design.
 Co-author (3rd author) of *Agent's GameDev Exam* (under review, ICLR 2027):
 agent evaluation in game-development environments.
 
-**Physics — co-lead.** [1 sentence on your concrete piece — fill in.]
-
-**Astronomy — co-lead.** [1 sentence on your concrete piece — fill in.]
-
 Across tracks, my role is the same end-to-end loop I built for V1: recruit
 domain experts, turn their workflows into executable task specs, build the
 graders, calibrate difficulty, and QC every task before it ships.
@@ -78,7 +74,7 @@ graders, calibrate difficulty, and QC every task before it ships.
 
 1. **Clear individual ownership inside a 310-author project** — the task
    pipeline and auto-scoring in V1 were mine; in V2 I independently lead
-   three domains and co-lead three more.
+   three domains and co-lead the game track.
 2. **Research taste plus systems ability** — I both decide what a trustworthy
    evaluation is and build the infrastructure that runs it at scale.
 3. **Initiative across institutions** — the Stanford (Prof. Zihuai He) and
