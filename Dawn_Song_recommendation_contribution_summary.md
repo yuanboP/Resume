@@ -30,10 +30,10 @@ Within the V1 team, I owned:
   evaluators (hash, tabular, geometric, visual, behavioral) that score agent
   outputs without hand labels, and that double as verifiable rewards for RL
   post-training (RLVR).
-- **Evaluation operations.** I ran the sandboxed evaluations on GCP
-  (container/VM task runners) and worked directly with frontier model teams
-  (OpenAI, Anthropic, Meta TBD Lab, Qwen, Seed) — executing their models on
-  ALE, analyzing trajectories, and reporting failure modes back.
+
+The team's large-scale evaluation runs — sandboxed execution on GCP and the
+evaluations with frontier model teams (OpenAI, Anthropic, Meta TBD Lab, Qwen,
+Seed) — ran on this pipeline and scoring infrastructure.
 
 ## Part 2 · ALE V2 — what I am doing, domain by domain
 
