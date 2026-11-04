@@ -6,99 +6,80 @@
 **Group:** Berkeley RDI / BAIR, Prof. Dawn Song's group, Oct 2025 – present
 **Contact:** yuanbopang@berkeley.edu · (408) 460-7526 · yuanbopang.pro
 
-A list of schools and deadlines (including which ones need a direct upload vs.
-Interfolio) will follow in a separate email.
+A list of schools and deadlines (Interfolio vs. direct upload) will follow in a
+separate email.
+
+ALE is a large team effort led by Prof. Song (310 authors on V1). This summary
+is written to separate **what I personally built and own** from what the team
+did around me.
 
 ---
 
-## Overview
-
-I joined Prof. Song's group in October 2025 and have worked on **Agents' Last
-Exam (ALE)** continuously since then — first as a core builder of the V1
-benchmark and evaluation system, now as the owner of several domain tracks and
-the first author of the ALE-SWE framework. My work spans the full pipeline:
-recruiting domain experts, turning expert workflows into executable task
-environments, building the programmatic graders that produce verifiable
-rewards, and running evaluations of frontier models.
-
-## 1 · ALE V1 — co-first author
+## Part 1 · ALE V1 — what I contributed
 
 *Agents' Last Exam*, arXiv:2606.05405, under review at NeurIPS 2026.
-Co-first author (5 co-first among 310 authors). **#1 Paper of the Week on
-Hugging Face Daily Papers (June 2026).**
+One of 5 co-first authors. #1 Paper of the Week, Hugging Face Daily Papers.
 
-- Led the task pipeline and auto-scoring system: converted expert-designed
-  workflows into 1,000+ executable VM tasks (load/start/evaluate contracts)
-  across 55 subdomains, including computer-use tasks with browser/desktop
-  automation.
-- Built cross-domain programmatic evaluators (hash, tabular, geometric,
-  visual, behavioral) producing verifiable rewards usable for both
-  measurement and RL post-training (RLVR) — no hand labels in the scoring
-  loop.
-- Ran sandboxed agent evaluation at scale on GCP (container/VM task runners);
-  worked with frontier model teams (OpenAI, Anthropic, Meta TBD Lab, Qwen,
-  Seed) on agent evaluation through ALE — analyzing trajectories and
-  reporting failure modes back to the labs.
+Within the V1 team, I owned:
 
-## 2 · ALE-SWE — first author
+- **The task pipeline.** I built the system that converts expert-designed
+  workflows into executable VM tasks — the load/start/evaluate contract that
+  every one of the 1,000+ tasks runs on, including computer-use tasks with
+  browser/desktop automation.
+- **The auto-scoring system.** I built the cross-domain programmatic
+  evaluators (hash, tabular, geometric, visual, behavioral) that score agent
+  outputs without hand labels, and that double as verifiable rewards for RL
+  post-training (RLVR).
+- **Evaluation operations.** I ran the sandboxed evaluations on GCP
+  (container/VM task runners) and worked directly with frontier model teams
+  (OpenAI, Anthropic, Meta TBD Lab, Qwen, Seed) — executing their models on
+  ALE, analyzing trajectories, and reporting failure modes back.
 
-- First author of the **ALE-SWE framework**: the complete software-engineering
-  track of ALE, from task schema and environment design through graders and
-  QC. [Status: manuscript in preparation / adjust as appropriate.]
+## Part 2 · ALE V2 — what I am doing, domain by domain
 
-## 3 · Agent's GameDev Exam — ICLR 2027, under review
+In V2 I moved from building shared infrastructure to owning domains.
 
-- Co-author (3rd author) of *Agent's GameDev Exam* (with Zonglin Di, Yinhe
-  Wang, et al., Dawn Song): agent evaluation in game-development
-  environments; grew out of the ALE game track, which I co-lead.
+**SWE — track lead, first author of the ALE-SWE framework.**
+I designed and am writing up the complete software-engineering track: task
+schema, environment construction, graders, and QC. [1–2 sentences on what
+makes ALE-SWE different from existing SWE benchmarks — fill in; status:
+manuscript in preparation / adjust.]
 
-## 4 · Domain leadership across ALE
+**Medical — track lead, collaboration with Prof. Zihuai He (Stanford).**
+Building medical-research agent tasks on ADRC (Alzheimer's Disease Research
+Center) data: I drive the task design and grader construction for agent
+workflows over real patient-derived research data.
 
-- **Lead** of three ALE tracks: **SWE, Medical, Bio** — owning each end to
-  end: expert recruiting, task specification, grader construction, difficulty
-  calibration, and QC of every shipped task.
-- **Co-lead** of three further tracks: **Game, Physics, Astronomy**.
+**Bio — track lead, partnership with New Atlantic [confirm name].**
+Designing protein-structure tasks: agents work from 2D structure to 3D
+structure, with programmatic verification of the predicted structures. I own
+the task specification and the verification design.
 
-## 5 · ALE-Medical — collaboration with Stanford
+**Game — co-lead.**
+Co-author (3rd author) of *Agent's GameDev Exam* (under review, ICLR 2027):
+agent evaluation in game-development environments.
 
-- Leading the medical track in collaboration with **Prof. Zihuai He
-  (Stanford)**: building clinical/medical-research agent tasks on **ADRC
-  (Alzheimer's Disease Research Center) data**, with graders that respect the
-  constraints of real patient-derived datasets.
+**Physics — co-lead.** [1 sentence on your concrete piece — fill in.]
 
-## 6 · ALE-Bio — protein-structure tasks
+**Astronomy — co-lead.** [1 sentence on your concrete piece — fill in.]
 
-- Leading the bio track in partnership with **New Atlantic** [confirm exact
-  organization name]: designing tasks where agents reason from **2D protein
-  structure to 3D structure**, with programmatic verification of the
-  predicted structures.
+Across tracks, my role is the same end-to-end loop I built for V1: recruit
+domain experts, turn their workflows into executable task specs, build the
+graders, calibrate difficulty, and QC every task before it ships.
 
-## 7 · ALE V2 — current directions
+## Outputs
 
-- Building 3D/spatial-understanding environments in simulation (Blender,
-  NVIDIA Isaac Lab) where agents explore a scene to judge physical state.
-- Designing ultra-long-horizon tasks from large-scale production software,
-  with a harness that evaluates *teams* of agents — coordination, division of
-  labor, context handoff.
-
-## Other context (if useful for the letter)
-
-- Additional publication: *ScienceIDE* (arXiv:2609.19134), #2 Paper of the
-  Day on Hugging Face Daily Papers (Sep 2026).
-- Robot-learning data benchmark (`roboqa`) in Prof. Tomizuka's lab, advised
-  by Zhuo Xu: dataset-quality measurement at EgoDex scale; VLA
-  train/post-train evaluation in simulation.
-- Founded Equile (Apr–Oct 2026): sandboxed agent-runtime infrastructure.
-- GPA 3.762 (in-major 3.811).
+- *Agents' Last Exam* — co-first author; NeurIPS 2026 under review; HF #1 of
+  the week.
+- *Agent's GameDev Exam* — 3rd author; ICLR 2027 under review.
+- *ScienceIDE* (arXiv:2609.19134) — co-author; HF #2 of the day.
 
 ## Themes the letter could speak to (suggestions only)
 
-1. **Ownership at unusual scale for an undergraduate** — from one of five
-   co-first authors on a 310-author benchmark to independently leading three
-   domain tracks and authoring the SWE framework.
-2. **Full-stack research ability** — the rare combination of research taste
-   (what makes an evaluation trustworthy) and the systems ability to build
-   the infrastructure that runs it.
-3. **Cross-institution initiative** — self-driven collaborations with
-   Stanford (Prof. Zihuai He) and industry partners for the medical and bio
-   tracks.
+1. **Clear individual ownership inside a 310-author project** — the task
+   pipeline and auto-scoring in V1 were mine; in V2 I independently lead
+   three domains and co-lead three more.
+2. **Research taste plus systems ability** — I both decide what a trustworthy
+   evaluation is and build the infrastructure that runs it at scale.
+3. **Initiative across institutions** — the Stanford (Prof. Zihuai He) and
+   industry collaborations for the medical and bio tracks are ones I drive.
