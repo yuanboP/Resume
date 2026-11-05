@@ -1,0 +1,94 @@
+% Quant-research-tilted resume (Citadel EQR / quant finance events)
+% Compile: tectonic Yuanbo_Pang_Resume_Quant.tex
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  pdfauthor={Yuanbo Pang},
+  pdftitle={Yuanbo Pang Resume}
+}
+
+\titleformat{\section}
+  {\large\bfseries\raggedright}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newcommand{\role}[2]{%
+  \vspace{4pt}%
+  \noindent\textbf{#1}\hfill\textit{#2}\par
+}
+\newcommand{\rolesub}[1]{%
+  \noindent\textit{#1}\par\vspace{1pt}%
+}
+
+\setlist[itemize]{
+  leftmargin=1.15em,
+  itemsep=1.5pt,
+  parsep=0pt,
+  topsep=1.5pt,
+  partopsep=0pt
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries YUANBO PANG}\\[3pt]
+  {\large UC Berkeley EECS \quad$\vert$\quad Large-Scale Measurement \& Data Systems}\\[3pt]
+  \href{mailto:yuanbopang@berkeley.edu}{yuanbopang@berkeley.edu}
+  $\;\cdot\;$ (+1) 408-460-7526
+  $\;\cdot\;$ \href{https://www.yuanbopang.pro}{yuanbopang.pro}
+  $\;\cdot\;$ \href{https://github.com/yuanboP}{GitHub}
+  $\;\cdot\;$ \href{https://www.linkedin.com/in/yuanbopang/}{LinkedIn}
+\end{center}
+
+\section{Education}
+\role{University of California, Berkeley --- B.S.\ EECS, GPA 3.762/4.0 (in-major 3.811)}{Expected Dec 2026}
+\rolesub{Coursework: Efficient Algorithms (CS 170), Discrete Math \& Probability (CS 70), Machine Learning (Stanford CS 229), Data Structures (CS 61B)}
+\role{Inspire Fellowship, rednote (Xiaohongshu) --- \$100K, one of 6 selected worldwide}{2026}
+
+\section{Research Experience}
+
+\role{Research Assistant, Berkeley RDI / BAIR (Prof.\ Dawn Song)}{Oct 2025 -- Present}
+\rolesub{Agents' Last Exam (ALE) --- co-first author \quad arXiv:2606.05405}
+\begin{itemize}
+  \item Co-first author of ALE, a 1,000+ task benchmark measuring frontier AI agents on long-horizon real-world work; \#1 Paper of the Week on Hugging Face. Led the task pipeline and the automated scoring system.
+  \item Built cross-domain programmatic evaluators (hash, tabular, geometric, visual, behavioral) that score agent outputs with no hand labels --- signals clean enough to double as RL training rewards; designed the checks that keep graders trustworthy as models and tasks drift.
+  \item First author of \textbf{ALE-Replica} (under review, CVPR 2027): agents rebuild professional software from documentation; evaluation replays identical operation scripts on original and reconstruction, comparing state and GUI step by step. Pilot: 22 bundles, $\sim$17K cases, frontier agent at 34.8\%.
+\end{itemize}
+
+\role{Robotics Research, Prof.\ Masayoshi Tomizuka's Lab, UC Berkeley}{2026 -- Present}
+\rolesub{roboqa --- dataset-quality measurement at scale, advised by Zhuo Xu}
+\begin{itemize}
+  \item Built a benchmark that prices messy real-world data by what it teaches: health, diversity, and trainability scored separately (never averaged --- units differ), on 338K episodes / 829 h of egocentric manipulation data.
+  \item Versioned measurement limits and full provenance on every published score (data fingerprint, measure versions, judge, commit); domain-appropriate tolerances, with stochasticity recorded rather than hidden.
+  \item Train and post-train VLA models on 500 h of curated data and score the resulting policies in simulation --- dataset quality read as downstream model performance.
+\end{itemize}
+
+\role{URAP Research Assistant, Prof.\ Avideh Zakhor, UC Berkeley EECS}{Spring 2026 -- Present}
+\begin{itemize}
+  \item UAV-to-UAV detection and multi-object tracking from a moving camera (YOLO, optical flow, SAM2-style tracking); targeting CVPR.
+\end{itemize}
+
+\role{Equile --- The Dry Lab for AI Scientists (independent side project)}{Apr 2026 -- Oct 2026}
+\begin{itemize}
+  \item Built reproducible computing environments where research agents run computational studies, each result carrying a provenance record; isolated sandboxes with multi-tenant packing and job scheduling (atomic claims, lease reclaim).
+\end{itemize}
+
+\section{Publications}
+\textbf{Agents' Last Exam} --- co-first author; under review, NeurIPS 2026; HF \#1 of the week. \quad \textbf{ALE-Replica} --- first author; under review, CVPR 2027. \quad \textbf{Agent's GameDev Exam} --- 2nd author; under review, ICLR 2027. \quad \textbf{ScienceIDE} (arXiv:2609.19134) --- HF \#2 of the day.
+
+\section{Skills}
+\textbf{Core:} Python (primary), PyTorch, C++, SQL, metric \& evaluator design, large-scale data pipelines\\[1pt]
+\textbf{Systems:} Docker, GCP, Modal, Postgres, Linux; sandboxed execution and job scheduling at scale
+
+\end{document}
