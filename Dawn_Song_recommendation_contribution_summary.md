@@ -56,7 +56,7 @@ structure, with programmatic verification of the predicted structures. I own
 the task specification and the verification design.
 
 **Game — co-lead.**
-Co-author (3rd author) of *Agent's GameDev Exam* (under review, ICLR 2027):
+Co-author (2nd author) of *Agent's GameDev Exam* (under review, ICLR 2027):
 agent evaluation in game-development environments.
 
 Across tracks, my role is the same end-to-end loop I built for V1: recruit
@@ -67,7 +67,7 @@ graders, calibrate difficulty, and QC every task before it ships.
 
 - *Agents' Last Exam* — co-first author; NeurIPS 2026 under review; HF #1 of
   the week.
-- *Agent's GameDev Exam* — 3rd author; ICLR 2027 under review.
+- *Agent's GameDev Exam* — 2nd author; ICLR 2027 under review.
 - *ScienceIDE* (arXiv:2609.19134) — co-author; HF #2 of the day.
 
 ## Themes the letter could speak to (suggestions only)
