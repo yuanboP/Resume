@@ -39,11 +39,19 @@ Seed) — ran on this pipeline and scoring infrastructure.
 
 In V2 I moved from building shared infrastructure to owning domains.
 
-**SWE — track lead, first author of the ALE-SWE framework.**
-I designed and am writing up the complete software-engineering track: task
-schema, environment construction, graders, and QC. [1–2 sentences on what
-makes ALE-SWE different from existing SWE benchmarks — fill in; status:
-manuscript in preparation / adjust.]
+**SWE — track lead, first author of ALE-Replica (CVPR 2027, under
+double-blind review).**
+First author of *ALE-Replica: Last Exam for Agents in Reconstructing
+Professional Software*. Agents must rebuild professional applications
+(AutoCAD, Maya, Blender, Revit, Rhino, Ansys) from official documentation
+alone; unlike prior reconstruction or visual-code benchmarks, evaluation
+replays the same operation scripts on the original and the reconstruction
+and checks **both state readbacks and the GUI after every operation**, not
+just final outputs. I designed the construction hierarchy (API → case →
+module → software), the seven-stage authoring/validation pipeline with
+anti-shortcut hidden suites, and the pilot evaluation: 22 bundles across six
+applications (~17K case occurrences), where a frontier agent reaches 34.8%
+with zero fully passing bundles.
 
 **Medical — track lead, collaboration with Prof. Zihuai He (Stanford).**
 Building medical-research agent tasks on ADRC (Alzheimer's Disease Research
@@ -67,6 +75,7 @@ graders, calibrate difficulty, and QC every task before it ships.
 
 - *Agents' Last Exam* — co-first author; NeurIPS 2026 under review; HF #1 of
   the week.
+- *ALE-Replica* — **first author**; CVPR 2027 under review.
 - *Agent's GameDev Exam* — 2nd author; ICLR 2027 under review.
 - *ScienceIDE* (arXiv:2609.19134) — co-author; HF #2 of the day.
 
