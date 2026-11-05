@@ -58,10 +58,13 @@ Building medical-research agent tasks on ADRC (Alzheimer's Disease Research
 Center) data: I drive the task design and grader construction for agent
 workflows over real patient-derived research data.
 
-**Bio — track lead, partnership with New Atlantic [confirm name].**
-Designing protein-structure tasks: agents work from 2D structure to 3D
-structure, with programmatic verification of the predicted structures. I own
-the task specification and the verification design.
+**Bio — track lead, partnership with New Atlantic (newatlantic.ai).**
+In partnership with New Atlantic, a company focused on evaluating and
+training scientific research agents with university labs: designing
+protein-structure tasks where agents work from 2D structure to 3D structure,
+with programmatic verification of the predicted structures. I own the task
+specification and the verification design, and drive the partnership on our
+side.
 
 **Game — co-lead.**
 Co-author (2nd author) of *Agent's GameDev Exam* (under review, ICLR 2027):
