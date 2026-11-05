@@ -38,7 +38,7 @@ const news = [
   },
   {
     date: "Apr 2026",
-    text: <>Founded Equile — the dry lab for AI scientists.</>,
+    text: <>Built Equile — the dry lab for AI scientists.</>,
   },
   {
     date: "Jan 2026",
@@ -113,7 +113,7 @@ const experience = [
   {
     date: "Apr 2026 - Oct 2026",
     title: "Equile",
-    detail: "Founder · the dry lab for AI scientists",
+    detail: "Independent side project · the dry lab for AI scientists",
   },
   {
     date: "Nov 2025 - Mar 2026",
@@ -189,7 +189,7 @@ export default function Home() {
               <strong>Zhuo Xu</strong> and{" "}
               <strong>Prof. Masayoshi Tomizuka</strong> on robot-learning data,
               and with <strong>Prof. Avideh Zakhor</strong> on UAV perception.
-              Outside research, I am the founder of{" "}
+              Outside research, I built{" "}
               <ExternalLink href="https://equile.tech">Equile</ExternalLink> —
               the dry lab for AI scientists.
             </p>
