@@ -57,10 +57,11 @@ pilot evaluation: 22 bundles across six applications (~17K case
 occurrences), where a frontier agent reaches 34.8% with zero fully passing
 bundles.
 
-**Medical — collaboration with Prof. Zihuai He (Stanford).**
-Participating in building medical-research agent tasks on ADRC (Alzheimer's
-Disease Research Center) data: task design and grader construction for agent
-workflows over real patient-derived research data.
+**Medical — track lead, collaboration with Prof. Zihuai He (Stanford).**
+I lead the medical track, working directly with Prof. Zihuai He to turn ADRC
+(Alzheimer's Disease Research Center) data into benchmark tasks: I drive the
+task design and grader construction for agent workflows over real
+patient-derived research data.
 
 **Bio — partnership with New Atlantic (newatlantic.ai).**
 Participating in building protein-structure tasks with New Atlantic, a
@@ -89,9 +90,10 @@ calibrating difficulty, and QC before a task ships.
 
 1. **Clear individual ownership inside a 310-author project** — the task
    pipeline and auto-scoring in V1 were mine; in V2 I lead the SWE track
-   (first-author paper) and contribute to the medical, bio, and game tracks.
+   (first-author paper) and the medical track, and contribute to the bio and
+   game tracks.
 2. **Research taste plus systems ability** — I both decide what a trustworthy
    evaluation is and build the infrastructure that runs it at scale.
-3. **Breadth across institutions** — contributing to collaborations with
-   Stanford (Prof. Zihuai He) and industry (New Atlantic) on the medical and
-   bio tracks.
+3. **Initiative across institutions** — I drive the Stanford collaboration
+   (Prof. Zihuai He) on the medical track day to day, and contribute to the
+   New Atlantic partnership on bio.
