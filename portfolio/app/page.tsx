@@ -113,7 +113,8 @@ const experience = [
   {
     date: "Apr 2026 - Oct 2026",
     title: "Equile",
-    detail: "Independent side project · the dry lab for AI scientists",
+    detail:
+      "Built the dry lab for AI scientists — reproducible computing environments where research agents run real computational studies",
   },
   {
     date: "Nov 2025 - Mar 2026",
