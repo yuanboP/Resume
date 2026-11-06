@@ -70,9 +70,9 @@ university labs: agents work from 2D structure to 3D structure, with
 programmatic verification of the predicted structures. I contribute to the
 task specification and the verification design.
 
-**Game — co-lead.**
-Co-author (2nd author) of *Agent's GameDev Exam* (under review, ICLR 2027):
-agent evaluation in game-development environments.
+**Game.**
+2nd author of *Agent's GameDev Exam* (under review, ICLR 2027): agent
+evaluation in game-development environments.
 
 Across tracks, I work within the same end-to-end loop I built for V1:
 turning expert workflows into executable task specs, building graders,
