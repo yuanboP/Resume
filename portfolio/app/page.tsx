@@ -183,9 +183,9 @@ export default function Home() {
               <strong>robot learning</strong>.
             </p>
             <p>
-              I work with <strong>Prof. Dawn Song</strong> at Berkeley
-              RDI/BAIR, where I am a co-first author of{" "}
-              <em>Agents&apos; Last Exam</em> (ALE). I also work with{" "}
+              I work at the <strong>Berkeley RDI Lab</strong> (under{" "}
+              <strong>Prof. Dawn Song</strong>), where I am a co-first author
+              of <em>Agents&apos; Last Exam</em> (ALE). I also work with{" "}
               <strong>Zhuo Xu</strong> and{" "}
               <strong>Prof. Masayoshi Tomizuka</strong> on robot-learning data,
               and with <strong>Prof. Avideh Zakhor</strong> on UAV perception.
