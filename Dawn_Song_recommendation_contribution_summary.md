@@ -52,6 +52,9 @@ just final outputs. I designed the construction hierarchy (API → case →
 module → software) and the seven-stage authoring/validation pipeline with
 anti-shortcut hidden suites, with independent review gating every task and a
 progress dashboard I built tracking each application through the pipeline.
+On the infrastructure side, I set up a dedicated transpacific link that
+moves capture and build workloads onto low-cost machines, cutting our GCP
+server costs by roughly 30×.
 The pipeline has collected 130K+ cases across 76 professional applications;
 pilot evaluation: 22 bundles across six applications (~17K case
 occurrences), where a frontier agent reaches 34.8% with zero fully passing

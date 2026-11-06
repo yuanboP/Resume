@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Woven Torus — generation &amp; scoring</title>
+<style>
+  :root { --bg:#f4f4f2; --ink:#1b1b1d; --mut:#6b6b70; --line:#dcdcd8; --good:#1a7f4b; --bad:#b4342a; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:13px/1.5 ui-sans-serif,-apple-system,"Helvetica Neue",Arial,sans-serif; }
+  header { padding:18px 22px 10px; }
+  h1 { margin:0 0 2px; font-size:17px; font-weight:650; letter-spacing:-.01em; }
+  .sub { color:var(--mut); font-size:12px; }
+  #controls { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-end; padding:12px 22px; border-bottom:1px solid var(--line); }
+  label { display:flex; flex-direction:column; gap:3px; font-size:11px; color:var(--mut); }
+  input[type=number] { width:68px; padding:4px 6px; border:1px solid var(--line); border-radius:5px;
+                       background:#fff; font:inherit; color:var(--ink); }
+  button { padding:7px 14px; border:1px solid var(--ink); border-radius:6px; background:var(--ink);
+           color:#fff; font:inherit; font-weight:550; cursor:pointer; }
+  button:disabled { opacity:.45; cursor:default; }
+  #status { padding:8px 22px; color:var(--mut); font-size:12px; min-height:30px; }
+  #stage { padding:0 22px; }
+  #view { display:block; width:100%; height:clamp(220px, 30vw, 330px); }
+  #labels { display:flex; padding:0 22px 14px; }
+  #labels div { flex:1 1 0; text-align:center; font-size:12px; font-weight:550; }
+  #labels small { display:block; font-weight:400; color:var(--mut); font-size:10.5px; }
+  .wrap { padding:0 22px 40px; overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; min-width:760px; font-variant-numeric:tabular-nums; }
+  th,td { padding:7px 9px; text-align:right; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th:first-child, td:first-child { text-align:left; }
+  thead th { font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--mut); font-weight:600; }
+  tbody tr:hover { background:#fff; }
+  td.total { font-weight:650; }
+  .ref td { color:var(--mut); }
+  .gate-pass { color:var(--good); }
+  .gate-fail { color:var(--bad); font-weight:600; }
+  .meta { color:var(--mut); font-size:10.5px; }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+  "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+}}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Woven Torus — generation &amp; scoring</h1>
+  <div class="sub">A reference lattice and seven candidate generations, scored on the 7-item rubric. Drag to orbit; all panels share one camera.</div>
+</header>
+
+<div id="controls"></div>
+<div id="status">Loading…</div>
+<div id="stage"><canvas id="view"></canvas></div>
+<div id="labels"></div>
+<div class="wrap"><table id="scores"></table></div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { buildWovenTorus, DEFAULT_PARAMS } from './src/wovenTorus.js';
+import { analyze, score, WEIGHTS } from './src/score.js';
+
+// Lighter sampling than the headless defaults so the page stays interactive.
+const ANALYSIS = { grid: 160, samples: 260000, fScoreSamples: 45000 };
+const RES = 150;
+
+// Each candidate is the reference with one or two things deliberately wrong,
+// which is what makes the per-item scores readable.
+const CANDIDATES = [
+  { name: 'Candidate A', note: 'barely off',       params: { width: 0.151 } },
+  { name: 'Candidate B', note: 'thin ribbons',     params: { width: 0.105, thick: 0.055 } },
+  { name: 'Candidate C', note: 'wider ribbons',    params: { width: 0.185, thick: 0.085 } },
+  { name: 'Candidate D', note: 'fewer strands',    params: { strands: 3 } },
+  { name: 'Candidate E', note: 'too many strands', params: { strands: 6, width: 0.09, thick: 0.055, weave: 0.022 } },
+  { name: 'Candidate F', note: 'twisted + wound',  params: { twistHalfTurns: 2, wind: 2 } },
+  { name: 'Candidate G', note: 'no weave, flat',   params: { weave: 0.0, flatten: 0.45, width: 0.2 } },
+];
+
+const PARAM_FIELDS = [
+  ['strands', 1, 8, 1], ['wind', 1, 4, 1], ['width', 0.05, 0.4, 0.005],
+  ['thick', 0.02, 0.2, 0.005], ['weave', 0, 0.1, 0.005], ['flatten', 0.3, 1, 0.01],
+];
+
+const statusEl = document.getElementById('status');
+const labelsEl = document.getElementById('labels');
+const tableEl = document.getElementById('scores');
+const canvas = document.getElementById('view');
+
+// ------------------------------------------------------------------ three.js
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setClearColor(0xf4f4f2, 1);
+renderer.setScissorTest(true);
+
+const scene = new THREE.Scene();
+scene.add(new THREE.HemisphereLight(0xffffff, 0x8f8f96, 1.6));
+const key = new THREE.DirectionalLight(0xffffff, 1.9);
+key.position.set(2.5, 3.5, 4);
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xffffff, 0.6);
+fill.position.set(-3, -1.5, -2);
+scene.add(fill);
+
+const material = new THREE.MeshStandardMaterial({
+  color: 0xb8bcc2, roughness: 0.55, metalness: 0.05, flatShading: false,
+});
+
+const BASE_FOV = 32;
+const camera = new THREE.PerspectiveCamera(BASE_FOV, 1, 0.1, 50);
+camera.position.set(2.78, -4.03, 3.06);
+camera.up.set(0, 0, 1);
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+controls.enablePan = false;
+controls.minDistance = 3.0;
+controls.maxDistance = 9;
+
+const meshes = []; // THREE.Mesh per panel, all centred at the origin
+
+function toGeometry(mesh) {
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(mesh.positions, 3));
+  g.setIndex(new THREE.BufferAttribute(mesh.indices, 1));
+  g.computeVertexNormals();
+  return g;
+}
+
+function resize() {
+  const w = canvas.clientWidth, h = canvas.clientHeight;
+  if (canvas.width !== w * renderer.getPixelRatio() || canvas.height !== h * renderer.getPixelRatio()) {
+    renderer.setSize(w, h, false);
+  }
+}
+
+function render() {
+  controls.update();
+  resize();
+  const n = Math.max(meshes.length, 1);
+  const w = canvas.clientWidth / n, h = canvas.clientHeight;
+  camera.aspect = w / h;
+  // panels are tall and narrow, so widen the vertical fov to keep the ring in
+  // frame instead of letting it get cropped left and right
+  camera.fov = 2 * THREE.MathUtils.radToDeg(
+    Math.atan(Math.tan(THREE.MathUtils.degToRad(BASE_FOV) / 2) / Math.min(1, camera.aspect)),
+  );
+  camera.updateProjectionMatrix();
+  for (let i = 0; i < meshes.length; i++) {
+    for (let j = 0; j < meshes.length; j++) meshes[j].visible = i === j;
+    renderer.setViewport(i * w, 0, w, h);
+    renderer.setScissor(i * w, 0, w, h);
+    renderer.render(scene, camera);
+  }
+  requestAnimationFrame(render);
+}
+requestAnimationFrame(render);
+
+// ------------------------------------------------------------------ UI
+
+const state = { ...DEFAULT_PARAMS, res: RES };
+
+const controlsEl = document.getElementById('controls');
+for (const [k, min, max, step] of PARAM_FIELDS) {
+  const label = document.createElement('label');
+  label.innerHTML = `${k}<input type="number" id="f-${k}" min="${min}" max="${max}" step="${step}" value="${state[k]}">`;
+  controlsEl.appendChild(label);
+}
+const rebuild = document.createElement('button');
+rebuild.textContent = 'Rebuild + score';
+controlsEl.appendChild(rebuild);
+rebuild.addEventListener('click', () => {
+  for (const [k] of PARAM_FIELDS) state[k] = parseFloat(document.getElementById(`f-${k}`).value);
+  run();
+});
+
+const frame = () => new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0)));
+
+function fmt(x, d = 2) { return Number.isFinite(x) ? x.toFixed(d) : '—'; }
+
+function renderTable(ref, rows) {
+  const cols = ['count', 'consistency', 'correspondence', 'twist', 'bulge', 'shape'];
+  const head = `<thead><tr>
+      <th>Model</th><th>Valid</th>
+      ${cols.map((c) => `<th>${c}<br><span class="meta">/${WEIGHTS[c]}</span></th>`).join('')}
+      <th>Total</th></tr></thead>`;
+  const refRow = `<tr class="ref"><td>Reference <span class="meta">— N=${ref.holeCount}, CV=${fmt(ref.cv)}, s=${fmt(ref.bulge)}</span></td>
+      <td class="${ref.topology.valid ? 'gate-pass' : 'gate-fail'}">${ref.topology.valid ? 'pass' : 'FAIL'}</td>
+      ${cols.map(() => '<td>—</td>').join('')}<td class="total">100.00</td></tr>`;
+  const body = rows.map(({ name, note, a, s }) => `<tr>
+      <td>${name} <span class="meta">— ${note}; N=${a.holeCount}, CV=${fmt(a.cv)}, s=${fmt(a.bulge)}</span></td>
+      <td class="${a.topology.valid ? 'gate-pass' : 'gate-fail'}">${a.topology.valid ? 'pass' : 'FAIL ×0.5'}</td>
+      ${cols.map((c) => `<td>${fmt(s.terms[c].score)}</td>`).join('')}
+      <td class="total">${fmt(s.total)}</td></tr>`).join('');
+  tableEl.innerHTML = `${head}<tbody>${refRow}${body}</tbody>`;
+}
+
+function setLabels(names) {
+  labelsEl.innerHTML = names.map(([n, sub]) => `<div>${n}<small>${sub}</small></div>`).join('');
+}
+
+async function run() {
+  rebuild.disabled = true;
+  for (const m of meshes) { m.geometry.dispose(); scene.remove(m); }
+  meshes.length = 0;
+  tableEl.innerHTML = '';
+
+  const panels = [{ name: 'Reference', note: 'target', params: {} }, ...CANDIDATES];
+  setLabels(panels.map((p) => [p.name, p.note]));
+
+  statusEl.textContent = 'Building reference…';
+  await frame();
+
+  let refAnalysis = null;
+  const rows = [];
+
+  for (let i = 0; i < panels.length; i++) {
+    const p = panels[i];
+    statusEl.textContent = `Building ${p.name} (${i + 1}/${panels.length})…`;
+    await frame();
+
+    const built = buildWovenTorus({ ...state, ...p.params });
+    const mesh = new THREE.Mesh(toGeometry(built), material);
+    scene.add(mesh);
+    meshes.push(mesh);
+    await frame();
+
+    statusEl.textContent = `Scoring ${p.name} (${i + 1}/${panels.length})…`;
+    await frame();
+
+    const a = analyze(built, ANALYSIS);
+    if (i === 0) {
+      refAnalysis = a;
+      renderTable(a, rows);
+    } else {
+      rows.push({ name: p.name, note: p.note, a, s: score(a, refAnalysis) });
+      renderTable(refAnalysis, rows);
+    }
+  }
+
+  statusEl.innerHTML = `Reference: genus ${refAnalysis.topology.genus}, `
+    + `<strong>N = ${refAnalysis.holeCount} holes</strong>, CV ${fmt(refAnalysis.cv)}, `
+    + `bulge ${fmt(refAnalysis.bulge)}, τ = ${fmt(0.01 * refAnalysis.bbox, 4)} `
+    + `(1% of the ${fmt(refAnalysis.bbox)} bbox diagonal). `
+    + `Twist per strand: [${refAnalysis.twists.join(', ')}].`;
+  rebuild.disabled = false;
+}
+
+run();
+</script>
+</body>
+</html>
