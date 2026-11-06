@@ -77,7 +77,7 @@ const projects = [
       </>
     ),
     links: [{ label: "Code", href: "https://github.com/yuanboP/URAP2026" }],
-    status: "Targeting CVPR",
+    status: "Targeting CVPR workshop",
   },
   {
     tag: "Agent Infra",
