@@ -42,9 +42,10 @@ In V2 I moved from building shared infrastructure to owning domains.
 **SWE — track lead, first author of ALE-Replica (CVPR 2027, under
 double-blind review).**
 First author of *ALE-Replica: Last Exam for Agents in Reconstructing
-Professional Software*. Agents must rebuild professional applications
-(AutoCAD, Maya, Blender, Revit, Rhino, Ansys) from official documentation
-alone; unlike prior reconstruction or visual-code benchmarks, evaluation
+Professional Software*. Agents must rebuild professional applications —
+commercial and open-source alike, across Windows, Linux, and macOS (AutoCAD,
+Maya, Revit, Rhino, Ansys, Photoshop, 3ds Max; Blender, FontForge,
+OpenModelica, and more) — from official documentation alone; unlike prior reconstruction or visual-code benchmarks, evaluation
 replays the same operation scripts on the original and the reconstruction
 and checks **both state readbacks and the GUI after every operation**, not
 just final outputs. I designed the construction hierarchy (API → case →
