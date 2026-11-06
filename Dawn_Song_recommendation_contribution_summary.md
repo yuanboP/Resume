@@ -49,12 +49,12 @@ replays the same operation scripts on the original and the reconstruction
 and checks **both state readbacks and the GUI after every operation**, not
 just final outputs. I designed the construction hierarchy (API → case →
 module → software) and the seven-stage authoring/validation pipeline with
-anti-shortcut hidden suites, and I run task production as a multi-agent
-factory: builder agents author evidence, separate reviewer agents gate it,
-and an ops dashboard I built tracks every application through the pipeline.
-Collection to date: 130K+ cases across 76 professional applications; pilot
-evaluation: 22 bundles across six applications (~17K case occurrences),
-where a frontier agent reaches 34.8% with zero fully passing bundles.
+anti-shortcut hidden suites, with independent review gating every task and a
+progress dashboard I built tracking each application through the pipeline.
+The pipeline has collected 130K+ cases across 76 professional applications;
+pilot evaluation: 22 bundles across six applications (~17K case
+occurrences), where a frontier agent reaches 34.8% with zero fully passing
+bundles.
 
 **Medical — track lead, collaboration with Prof. Zihuai He (Stanford).**
 Building medical-research agent tasks on ADRC (Alzheimer's Disease Research
