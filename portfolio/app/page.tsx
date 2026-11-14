@@ -1,15 +1,5 @@
 const news = [
   {
-    date: "Nov 2026",
-    text: (
-      <>
-        Selected for the <strong>Inspire Fellowship</strong> by rednote — one
-        of the first 6 fellows worldwide ($100K grant).
-      </>
-    ),
-    isNew: true,
-  },
-  {
     date: "Sep 2026",
     text: (
       <>
@@ -17,6 +7,7 @@ const news = [
         agent-learnable environments (with AItonomy Foundation).
       </>
     ),
+    isNew: true,
   },
   {
     date: "Sep 2026",
