@@ -1,72 +1,64 @@
 # Draft — Recommendation Letter (Dawn Song for Yuanbo Pang)
 
-*Working draft for Prof. Song's team to edit. Everything here is consistent
-with the contribution summary; bracketed items are judgments only Prof. Song
-can calibrate.*
+*Working draft for Prof. Song's team. Bracketed items are judgments only
+Prof. Song can calibrate. Built around three concrete cases rather than
+adjectives.*
 
 ---
 
 To the Admissions Committee:
 
-I am writing to give my strongest recommendation for Yuanbo Pang, who is
-applying to your PhD program. Yuanbo is an undergraduate researcher in my
-group at Berkeley RDI/BAIR, where he has worked with me since October 2025.
-In that time he has grown from a contributor on a large team project into
-someone who independently leads research tracks, publishes as a first
-author, and builds infrastructure the whole group depends on. [He is among
-the top X undergraduates I have worked with in Y years at Berkeley.]
+I write to give my strongest recommendation for Yuanbo Pang, an
+undergraduate researcher in my group at Berkeley RDI/BAIR since October
+2025. Rather than list qualities, let me describe three things he actually
+did. [He is among the top X undergraduates I have worked with in Y years.]
 
-Yuanbo joined my group to work on Agents' Last Exam (ALE), our large-scale
-benchmark for evaluating AI agents on long-horizon, real-world tasks (under
-review at NeurIPS 2026; it reached #1 Paper of the Week on Hugging Face
-Daily Papers). ALE is a 310-author effort, so I want to be precise about
-what was his. Yuanbo is one of five co-first authors, and within the team he
-owned two of the load-bearing pieces: the task pipeline that converts
-expert-designed workflows into executable VM tasks — the load/start/evaluate
-contract that every one of the benchmark's 1,000+ tasks runs on — and the
-cross-domain automated scoring system, whose programmatic evaluators score
-agent outputs without hand labels and double as verifiable rewards for RL
-post-training. When we later ran large-scale evaluations with frontier model
-teams, all of it ran on infrastructure Yuanbo had built. For an
-undergraduate to own components at this level of criticality, in a project
-of this size, is rare.
+**He turned a flood of raw submissions into a benchmark.** Agents' Last
+Exam (ALE, under review at NeurIPS 2026; #1 Paper of the Week on Hugging
+Face) collected tasks from hundreds of external domain experts — 310
+authors in total. What arrived was raw: workflows in inconsistent formats,
+missing environments, untestable claims. Yuanbo owned the review and
+conversion layer that made this scale survivable. He reviewed external
+submissions, decided what a benchmark-grade task required, and built the
+pipeline that converted accepted workflows into executable VM tasks — the
+load/start/evaluate contract all 1,000+ tasks now run on — together with
+the cross-domain automated scoring that grades agent outputs without hand
+labels and doubles as verifiable rewards for RL. ALE's influence rests on
+the fact that its tasks actually run and its scores can be trusted; that
+layer was Yuanbo's. He is one of five co-first authors, and when frontier
+model teams later evaluated their agents on ALE, everything ran on his
+infrastructure.
 
-What distinguishes Yuanbo most is what happened next. For ALE's second
-phase, he proposed and now leads the software-engineering track, which has
-become its own research program: Software Last Exam (under double-blind review at
-CVPR 2027, with Yuanbo as first author). The idea is demanding — agents must
-rebuild professional applications such as AutoCAD, Maya, and Blender from
-official documentation alone, and the evaluation replays identical operation
-scripts on the original and the reconstruction, checking both program state
-and the GUI after every operation. Yuanbo designed the construction
-hierarchy and the seven-stage authoring and validation pipeline, including
-hidden test suites with negative controls that force shortcut solutions to
-score zero. He also built the operational side: independent review gating
-every task, a progress dashboard tracking all applications through the
-pipeline, and — characteristically — a dedicated transpacific link that
-moved capture workloads onto low-cost machines and cut our server costs by
-roughly thirty-fold. The pipeline has collected over 130,000 cases across 76
-professional applications spanning Windows, Linux, and macOS. He thinks
-simultaneously like a researcher (what makes a measurement trustworthy?) and
-like a systems engineer (what makes it run at scale, affordably?), and I
-rarely see both in one student.
+**He compresses weeks into days.** Yuanbo's distinctive engineering habit
+is massive parallelization: work that would take another student a week —
+converting a batch of submissions, standing up capture environments for a
+new application family, re-running a scoring sweep after a contract change
+— he routinely finishes in one or two days by decomposing it into
+parallel jobs across fleets of machines and agents, with independent
+review gating what ships. The same instinct shows up as cost discipline:
+when capture workloads strained our budget, he set up a dedicated
+transpacific link to low-cost machines and cut our server costs roughly
+thirty-fold. This is not engineering for its own sake; it is why his
+research moves at the pace it does.
 
-Beyond the SWE track, Yuanbo leads our medical track in collaboration with
-Prof. Zihuai He at Stanford, turning Alzheimer's Disease Research Center
-data into benchmark tasks — he drives the task design and grader
-construction day to day. He contributes to our bio track (protein-structure
-tasks with the startup New Atlantic) and is second author on Agent's GameDev
-Exam (under review at ICLR 2027). Outside my group, he does robot-learning
-data research in Prof. Masayoshi Tomizuka's lab and has built his own
-agent-infrastructure systems — breadth that feeds back into his work with
-us.
+**He proposed a research direction and carried it to a first-author
+paper.** For ALE's second phase, Yuanbo asked a question the field had
+not: can an agent *rebuild* professional software — AutoCAD, Maya, Blender
+— from documentation alone, judged by replaying identical operation
+scripts on the original and the reconstruction, checking state and GUI
+after every step? That became *Software Last Exam* (under double-blind
+review at CVPR 2027, Yuanbo as first author). He designed the seven-stage
+construction pipeline, the hidden suites with negative controls that force
+shortcut solutions to zero, and the production system behind it; the
+pipeline has collected 130K+ cases across 76 applications on Windows,
+Linux, and macOS. He also leads our medical track with Prof. Zihuai He at
+Stanford, building benchmark tasks from Alzheimer's Disease Research
+Center data.
 
-Yuanbo is self-driven to an unusual degree: the collaborations, the
-infrastructure, and the first-author paper above all began as his
-initiative. He communicates clearly, takes feedback well, and is generous
-with teammates. I expect him to thrive in a PhD program and to become the
-kind of researcher who defines how we measure AI systems. I recommend him
-[without reservation / with my strongest enthusiasm].
+The pattern across all three: Yuanbo finds the question worth asking, then
+builds — at unusual speed — the system that answers it. I expect him to
+become the kind of researcher who defines how we measure AI systems, and I
+recommend him [without reservation / with my strongest enthusiasm].
 
 Sincerely,
 
@@ -78,9 +70,9 @@ University of California, Berkeley
 
 ## Notes for the drafting team
 
-- Bracketed superlatives (top-X ranking, closing strength) are Prof. Song's
-  call; the rest is verifiable against the contribution summary and CV.
-- Length ~650 words — standard one-to-1.5 pages on letterhead.
-- If one paragraph must be cut for shorter forms, cut the "Beyond the SWE
-  track" paragraph before anything else; the V1-ownership and Software Last Exam
-  paragraphs carry the letter.
+- ~520 words; one page on letterhead.
+- Each paragraph is one verifiable case: (1) external-submission review →
+  benchmark-grade tasks + pipeline/scoring ownership; (2) parallelization
+  speed + 30× cost cut; (3) Software Last Exam first-author + medical
+  track. No filler adjectives.
+- Bracketed superlatives are Prof. Song's call.
