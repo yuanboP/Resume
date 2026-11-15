@@ -39,10 +39,9 @@ Seed) — ran on this pipeline and scoring infrastructure.
 
 In V2 I moved from building shared infrastructure to owning domains.
 
-**SWE — track lead, first author of ALE-Replica (CVPR 2027, under
+**SWE — track lead, first author of Software Last Exam (CVPR 2027, under
 double-blind review).**
-First author of *ALE-Replica: Last Exam for Agents in Reconstructing
-Professional Software*. Agents must rebuild professional applications —
+First author of *Software Last Exam*. Agents must rebuild professional applications —
 commercial and open-source alike, across Windows, Linux, and macOS (AutoCAD,
 Maya, Revit, Rhino, Ansys, Photoshop, 3ds Max; Blender, FontForge,
 OpenModelica, and more) — from official documentation alone; unlike prior reconstruction or visual-code benchmarks, evaluation
@@ -85,7 +84,7 @@ calibrating difficulty, and QC before a task ships.
 
 - *Agents' Last Exam* — co-first author; NeurIPS 2026 under review; HF #1 of
   the week.
-- *ALE-Replica* — **first author**; CVPR 2027 under review.
+- *Software Last Exam* — **first author**; CVPR 2027 under review.
 - *Agent's GameDev Exam* — 2nd author; ICLR 2027 under review.
 - *ScienceIDE* (arXiv:2609.19134) — co-author; HF #2 of the day.
 

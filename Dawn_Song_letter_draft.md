@@ -33,7 +33,7 @@ of this size, is rare.
 
 What distinguishes Yuanbo most is what happened next. For ALE's second
 phase, he proposed and now leads the software-engineering track, which has
-become its own research program: ALE-Replica (under double-blind review at
+become its own research program: Software Last Exam (under double-blind review at
 CVPR 2027, with Yuanbo as first author). The idea is demanding — agents must
 rebuild professional applications such as AutoCAD, Maya, and Blender from
 official documentation alone, and the evaluation replays identical operation
@@ -82,5 +82,5 @@ University of California, Berkeley
   call; the rest is verifiable against the contribution summary and CV.
 - Length ~650 words — standard one-to-1.5 pages on letterhead.
 - If one paragraph must be cut for shorter forms, cut the "Beyond the SWE
-  track" paragraph before anything else; the V1-ownership and ALE-Replica
+  track" paragraph before anything else; the V1-ownership and Software Last Exam
   paragraphs carry the letter.
