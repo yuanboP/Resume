@@ -1,0 +1,26 @@
+{
+  "school": "Stanford",
+  "target_program": "Computer Science PhD",
+  "target_entry": "Fall 2027",
+  "checked_on": "2026-11-21",
+  "applicant_name": "Yuanbo Pang",
+  "proposed_email": "yuanbopang@gmail.com",
+  "email_confirmed": true,
+  "portal": "https://applygrad.stanford.edu/portal/grad-app",
+  "deadline_date": "2026-12-08",
+  "deadline_time": "23:59 America/Los_Angeles (university-wide rule)",
+  "deadline_source": "https://www.cs.stanford.edu/admissions-graduate-application-deadlines",
+  "notes": "Official PhD deadline table says December 8, 2026; corrects user-provided December 1. Registration Continue includes consent to collection and processing of sensitive application data.",
+  "recommendation_notes": "User states direct recommendation submission required; not yet independently verified.",
+  "local_dossier_status": "created",
+  "registration_status": "temporary_pin_sent_activation_pending",
+  "portal_application_created": false,
+  "application_submitted": false,
+  "blocking_items": [
+    "User completes email PIN verification and password setup"
+  ],
+  "next_action": "Applicant completes PIN verification/password setup; then create CS PhD Autumn 2027 draft.",
+  "latest_progress": "Registration submitted; temporary PIN sent to Gmail. User authorized privacy consent. Still on PIN login page; account activation and program application pending.",
+  "active_scope": true,
+  "date_of_birth_provided": true
+}
