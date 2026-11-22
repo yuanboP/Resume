@@ -21,7 +21,7 @@
 | Autonomous systems engineering | Starbot：VLA、agentic planning/control、multi-robot coordination；CV 记录 CES 部署 | 机器人系统集成、多机器人协调、实机鲁棒性 |
 | Evaluation / verifiable feedback | ALE：可执行任务、程序化评分器、规模化评测、RLVR 奖励 | 机器人学习的可靠评价、失败分析、可复现实验 |
 
-这些是申请人已有经历的组织方式，不是已确认的 Northwestern ME 导师研究方向。待主工作线拿到门户名单后，再逐项比对实际导师。
+这些是申请人已有经历的组织方式，不是已确认的 Northwestern ME 导师研究方向。门户已确认没有固定导师名单；主工作线核验的官方 ME 目录候选见 [advisors.md](./advisors.md)，可据此逐项比对。
 
 ## 本地搜索结果与边界
 
@@ -36,11 +36,21 @@
 - 研究进展与数字按当前实际完成情况确认，尤其机器人数据、VLA 训练及实验结果。
 - CV 联系邮箱为 Berkeley 邮箱，账号为 Gmail；后续统一申请联系策略即可，不在本次擅自改原 CV。
 
+## 已核验的 ME 门户信息
+
+主工作线已保存 Mechanical Engineering: PHD（M40PH）/ Fall 2027。截止日期为 2026-12-15，准确时间待核验；GRE 不要求，且不会用于 2027 录取。CV 为必交材料。
+
+门户核心研究方向需三选一：Design & Manufacturing、Robotics & Biosystems、Mechanics & Materials。交叉方向需七选二：Advanced Manufacturing、AI and Design、Biosystems and Health、Computational Engineering、Energy and Sustainability、Micro/Nanoengineering、Robotics and Autonomy。目前均未选择。
+
+从现有 CV 看，Robotics & Biosystems 与 Robotics and Autonomy 有直接经历支撑；第二交叉方向可根据用户希望突出 AI 方法还是计算/仿真决定。这里只给材料匹配建议，不自动替用户填写。
+
 ## ME 专属缺项
 
-- [ ] 门户实际可选导师和研究方向。
-- [ ] 本轮 ME PhD 申请截止日期及准确时区。
-- [ ] ME 的 GRE 规则；**不沿用 CS 的要求**。
+- [x] 门户导师填写方式已核验：多位姓名文本框，无固定下拉列表；当前未填写。官方候选与来源见 [advisors.md](./advisors.md)。
+- [ ] 用户确定核心/交叉研究方向与潜在导师。
+- [x] 本轮 ME PhD 申请截止日期：2026-12-15。
+- [ ] 截止准确时间与时区。
+- [x] ME GRE 规则：2027 admissions 不要求且不采用。
 - [ ] ME 推荐信数量、方式及 Interfolio 政策；**不沿用 CS 的要求**。
 - [ ] ME 文书题目、字数、格式和附加问题。
 - [ ] 成绩单文件位置（本次文件名搜索未找到 transcript 文件，不等于用户没有）。

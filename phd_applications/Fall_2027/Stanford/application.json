@@ -8,19 +8,44 @@
   "email_confirmed": true,
   "portal": "https://applygrad.stanford.edu/portal/grad-app",
   "deadline_date": "2026-12-08",
-  "deadline_time": "23:59 America/Los_Angeles (university-wide rule)",
+  "deadline_time": "23:59 America/Los_Angeles",
   "deadline_source": "https://www.cs.stanford.edu/admissions-graduate-application-deadlines",
-  "notes": "Official PhD deadline table says December 8, 2026; corrects user-provided December 1. Registration Continue includes consent to collection and processing of sensitive application data.",
+  "notes": "Program and entry term verified in application portal; no final submission or fee payment.",
   "recommendation_notes": "User states direct recommendation submission required; not yet independently verified.",
   "local_dossier_status": "created",
-  "registration_status": "temporary_pin_sent_activation_pending",
-  "portal_application_created": false,
+  "registration_status": "authenticated_application_created",
+  "portal_application_created": true,
   "application_submitted": false,
   "blocking_items": [
-    "User completes email PIN verification and password setup"
+    "Institution entries require transcripts; uploads remain paused.",
+    "Community-college coursework dates and complete education history pending transcripts.",
+    "Faculty preferences, remaining background questions, statements and recommendations incomplete."
   ],
-  "next_action": "Applicant completes PIN verification/password setup; then create CS PhD Autumn 2027 draft.",
-  "latest_progress": "Registration submitted; temporary PIN sent to Gmail. User authorized privacy consent. Still on PIN login page; account activation and program application pending.",
+  "next_action": "Wait for transcripts; extract confirmed attendance terms and course-only education records. Continue materials only within user upload instruction.",
+  "latest_progress": "Saved and revisit-verified: applying to other Stanford professional schools No; prior Stanford undergraduate/graduate degree program enrollment No.",
   "active_scope": true,
-  "date_of_birth_provided": true
+  "date_of_birth_provided": true,
+  "account_exists": true,
+  "account_activated": true,
+  "application_origin": "created_this_session",
+  "confirmed_portal_program": "Computer Science (PhD)",
+  "confirmed_portal_entry": "Autumn 2027-2028",
+  "progress_updated_on": "2026-11-21",
+  "saved_form_progress": [
+    "Primary phone, mailing address, birth country/city, China citizenship and Chinese first language saved.",
+    "English-medium undergraduate degree expected before enrollment: Yes, based on Berkeley B.S.",
+    "Homepage https://yuanbopang.pro saved in Program Supplemental.",
+    "Parents highest education Masters saved.",
+    "All three research experiences saved: RDI/BAIR September 2025–present 28h/week, Tomizuka August 2026–present 5h/week, Zakhor March 2026–present 8h/week."
+  ],
+  "uploads_on_hold_by_user": true,
+  "recommendation_invitations_sent": false,
+  "progress_report": "../form-progress-2026-11-21.md",
+  "confirmed_profile_updates": "../confirmed-profile-updates-2026-11-21.json",
+  "latest_saved_update": [
+    "Saved and revisit-verified: applying to other Stanford professional schools No; prior Stanford undergraduate/graduate degree program enrollment No."
+  ],
+  "login_status": "authenticated_verified_2026-11-21_latest_pass",
+  "permanent_address_location": "San Jose",
+  "reviewed_transcript_data": "../transcripts-reviewed-2026-11-21.json"
 }

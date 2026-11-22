@@ -1,0 +1,5 @@
+Research Assistant, Berkeley RDI / BAIR, Prof. Dawn Song (September 20, 2025–present; 28 hours/week). Co-first author of Agents' Last Exam. Built task/environment pipelines, computer-use and tool interfaces, scalable GCP execution, and programmatic evaluators. Current work includes active perception and 3D spatial understanding in simulation, and long-horizon engineering tasks for teams of agents.
+
+Robotics Research, Prof. Masayoshi Tomizuka's Lab, UC Berkeley (August 2026–present; 5 hours/week), mentored by Zhuo Xu. Building a large-scale robot-learning data-quality benchmark, VLM-assisted quality audits and annotation workflows, and VLA training and simulation evaluation pipelines.
+
+URAP Research Assistant, Prof. Avideh Zakhor, UC Berkeley EECS (March 2026–present; 8 hours/week). Building UAV-to-UAV datasets and PyTorch pipelines for zero-shot detection and multi-object tracking under high-speed ego-motion, integrating optical flow with YOLO and SAM2-style baselines.

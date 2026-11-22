@@ -22,3 +22,23 @@ Created and saved Computer Science & Engineering - PhD - AUT27, Seattle campus, 
 - [ ] 推荐人信息及提交方式
 - [ ] 适用的语言成绩或豁免
 - [ ] 申请完整性核对、申请费及最终提交
+
+## 2026-11-21 表单继续填写
+
+- Reauthenticated existing account.
+- Male saved.
+- San Jose permanent address manually entered, saved and revisit-verified; Same as Mailing shortcut initially did not persist.
+- Current/expected F-1, parents Masters, U.S.-degree residence confirmation, Berkeley B.S. GPA 3.76 and research summary retained.
+
+待补：
+
+- Complete non-degree college history pending transcripts.
+- Phone type and ranked research/faculty preferences remain blank.
+- SOP/CV, materials and recommendations incomplete.
+
+详见 [最新进展](../form-progress-2026-11-21.md)。
+
+## Latest continued filling pass — 2026-11-21
+
+- Reauthenticated existing account.
+- Found research keywords, summary and awards empty despite earlier report. Native input and native save succeeded; reopening verified all three persisted.

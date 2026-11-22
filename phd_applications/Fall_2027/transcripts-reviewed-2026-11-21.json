@@ -1,0 +1,112 @@
+{
+  "checked_on": "2026-11-21",
+  "uploads_on_hold": true,
+  "records": [
+    {
+      "institution": "Evergreen Valley College",
+      "city": "San Jose",
+      "state": "California",
+      "country": "United States",
+      "source_pdf": "/Users/aaronpang/Downloads/TE2D41QD.pdf",
+      "issued_on": "2024-12-20",
+      "terms_documented": [
+        "Fall 2024 Regular Term"
+      ],
+      "gpa": 4.0,
+      "gpa_scale": 4.0,
+      "semester_units_attempted": 4.0,
+      "semester_units_completed": 4.0,
+      "grade_points": 16.0,
+      "degree_awarded": false,
+      "degree_basis": "User confirmed coursework only, no AS; transcript lists no award.",
+      "major_on_transcript": null,
+      "courses": [
+        {
+          "code": "COMSC 078",
+          "section": "201",
+          "title": "Program Structures",
+          "grade": "A",
+          "units": 4.0
+        }
+      ],
+      "calendar_reference": {
+        "url": "https://sjeccd.edu/sites/default/files/documents/HR_2024-2025_Academic-Calendar_rev.01.29.2024.pdf",
+        "local_file": "/Users/aaronpang/Downloads/HR_2024-2025_Academic-Calendar_rev.01.29.2024.pdf",
+        "regular_fall_semester_start": "2024-08-26",
+        "regular_fall_semester_end": "2024-12-12",
+        "status": "Official semester dates; not an explicit personal first/last attendance date."
+      },
+      "later_attendance_after_issue": false,
+      "medium_of_instruction_statement_present": false,
+      "later_attendance_confirmation": "User confirmed on 2026-11-21: no further courses after Fall 2024.",
+      "last_attendance_month": "2024-12",
+      "first_attendance_month": "2024-08",
+      "attendance_date_basis": "Fall 2024 Regular Term on transcript; month inferred from official SJECCD calendar at user request."
+    },
+    {
+      "institution": "Diablo Valley College",
+      "city": "Pleasant Hill",
+      "state": "California",
+      "country": "United States",
+      "source_pdf": "/Users/aaronpang/Downloads/TE2D4MEF.pdf",
+      "issued_on": "2024-12-20",
+      "terms_documented": [
+        "Fall 2024"
+      ],
+      "gpa": 4.0,
+      "gpa_scale": 4.0,
+      "semester_units_attempted": 4.0,
+      "semester_units_completed": 4.0,
+      "grade_points": 16.0,
+      "degree_awarded": false,
+      "degree_basis": "User confirmed coursework only, no AS; transcript lists no award.",
+      "major_on_transcript": null,
+      "courses": [
+        {
+          "code": "COMSC 260",
+          "section": null,
+          "title_on_transcript": "Assembly Lang Prog/Comp Org",
+          "grade": "A",
+          "units": 4.0
+        }
+      ],
+      "calendar_reference": {
+        "url": "https://www.dvc.edu/sites/default/files/2024-06/FA24-Schedule.pdf",
+        "local_file": "/Users/aaronpang/Downloads/FA24-Schedule.pdf",
+        "course_start_dates_by_section": {
+          "5100": "2024-08-26",
+          "5104": "2024-08-26",
+          "5126": "2024-08-26",
+          "5318": "2024-08-26",
+          "5544": "2024-08-26",
+          "8031": "2024-09-09"
+        },
+        "course_end": "2024-12-13",
+        "status": "Start month resolved by user: August 2024. Exact course section remains unknown and was not inferred."
+      },
+      "later_attendance_after_issue": false,
+      "medium_of_instruction_statement_present": false,
+      "later_attendance_confirmation": "User confirmed on 2026-11-21: no further courses after Fall 2024.",
+      "last_attendance_month": "2024-12",
+      "first_attendance_month": "2024-08",
+      "attendance_date_basis": "User confirmed August start on 2026-11-22; Fall 2024 transcript and user confirmed no subsequent coursework; December end supported by course schedule."
+    }
+  ],
+  "portal_updates_from_these_transcripts": {
+    "MIT": {
+      "Evergreen Valley College": "Saved and reopened verified: Undergraduate, Non-Degree, Aug-Dec 2024, GPA 4/4. Mandatory major set to Computer Science to describe COMSC coursework; explanatory text states non-degree coursework, no degree awarded. No transcript uploaded.",
+      "course": "Saved COMSC 078 - Program Structures, Evergreen Valley College, August 2024, A.",
+      "Diablo Valley College": "Saved and reopened verified on 2026-11-22: August–December 2024, non-degree coursework, GPA 4/4. No transcript uploaded.",
+      "DVC_course": "Saved and visible in course table: COMSC 260 - Assembly Lang Prog/Comp Org, Diablo Valley College, August 2024, A."
+    },
+    "Princeton": {
+      "Evergreen Valley College": "Saved and reopened verified: Other, No Degree Awarded or Expected, Complete, Aug-Dec 2024, completion date Dec 2024 as portal instructed for no degree; GPA 4/4. Major left blank. No transcript uploaded.",
+      "Diablo Valley College": "Saved and reopened verified on 2026-11-22: August–December 2024, non-degree coursework, GPA 4/4. No transcript uploaded."
+    },
+    "UW": {
+      "Evergreen Valley College": "Saved and reopened verified: Undergraduate, Aug-Dec 2024, degree No, GPA 4/4. Major and degree date left blank. No transcript uploaded.",
+      "Diablo Valley College": "Saved and reopened verified on 2026-11-22: August–December 2024, non-degree coursework, GPA 4/4. No transcript uploaded."
+    },
+    "DVC": "Saved in MIT, Princeton, UW. MIT mandatory major set to Computer Science with explicit non-degree coursework explanation; Princeton and UW majors blank. Other portals remain subject to existing blockers."
+  }
+}

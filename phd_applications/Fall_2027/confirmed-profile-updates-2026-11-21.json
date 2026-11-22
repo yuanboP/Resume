@@ -1,0 +1,82 @@
+{
+  "confirmed_on": "2026-11-21",
+  "current_visa": "F-1",
+  "parents_highest_education": [
+    "Masters",
+    "Masters"
+  ],
+  "research": [
+    {
+      "lab": "RDI / BAIR",
+      "pi": "Dawn Song",
+      "start_date": "2025-09-20",
+      "hours_per_day": 4,
+      "hours_per_week_entered": 28,
+      "hours_derivation": "4 hours/day × 7; assumption stated to user",
+      "current": true
+    },
+    {
+      "lab": "Masayoshi Tomizuka Lab",
+      "start_month": "2026-08",
+      "hours_per_week": 5,
+      "current": true
+    },
+    {
+      "lab": "Avideh Zakhor Lab",
+      "start_month": "2026-03",
+      "hours_per_week": 8,
+      "current": true
+    }
+  ],
+  "northwestern_history": {
+    "previously_applied_TGS": false,
+    "previously_enrolled_TGS": false,
+    "transferring_with_faculty": false,
+    "portal_update_status": "Saved and revisit-verified: all No"
+  },
+  "UW_full_duration_US_degree_residence": true,
+  "colleges_attended_user_text": [
+    "De Anza",
+    "Foothill",
+    "Diablo",
+    "Evergreen"
+  ],
+  "college_details_pending": [
+    "AS degree award status",
+    "Foothill/Diablo/Evergreen official names, dates, degrees and GPAs"
+  ],
+  "permanent_address_assignment": {
+    "UC Berkeley": "San Jose",
+    "Stanford": "San Jose",
+    "MIT": "San Jose",
+    "UW": "San Jose",
+    "Princeton": "Nanjing, Jiangsu 210028",
+    "Northwestern": "Existing Nanjing address preserved",
+    "basis": "User described San Jose as stable aunt home and origin Nanjing. Assistant stated this per-school interpretation and filled it using earlier authorizations."
+  },
+  "nanjing_postal_lookup": {
+    "candidate_postcode": "210028",
+    "province": "Jiangsu",
+    "district": "Qixia",
+    "source": "https://tw.youbianku.com/江苏省南京市栖霞区华电西路华电一宿舍20幢3单元105室",
+    "caveat": "Source uses Huadian West Road; user existing record uses Hongshan Road. Same named Huadian No.1 residence; retain user street pending clarification."
+  },
+  "not_answered": [
+    "Full community-college dates, majors, GPAs and exact institution names pending transcripts",
+    "Faculty selections/rankings and statement details"
+  ],
+  "uploads_on_hold": true,
+  "legal_sex": "Male",
+  "disciplinary_or_academic_integrity_history": false,
+  "community_college_degrees_awarded": false,
+  "community_college_attendance_type": "Coursework only, no AS degree",
+  "education_dates_next_step": "Wait for user-provided transcripts; extract documented terms and label any date inference. Do not invent exact days.",
+  "northwestern_masters_fallback": true,
+  "latest_user_confirmations": {
+    "us_study_start": "2023-09",
+    "stanford_other_professional_school_applications": false,
+    "stanford_prior_degree_program_enrollment": false,
+    "princeton_external_fellowship_applying": false,
+    "princeton_external_fellowship_awarded_for_graduate_study": false
+  }
+}

@@ -10,15 +10,19 @@
   "deadline_date": "2026-12-01",
   "deadline_time": "20:59 America/Los_Angeles",
   "deadline_source": "https://eecs.berkeley.edu/academics/graduate/research-programs/admissions/",
-  "notes": "Fall 2027 explicitly confirmed. Portal separates Electrical Engineering and Computer Sciences (EE division) from Computer Science (CS division); confirm division before creating program application.",
+  "notes": "Compared CS MS/PhD and EECS MS/PhD Faculty Preference #1 dropdowns: identical 158 faculty names. Program restored to existing EECS - Computer Science MS/PhD. Final division choice remains open for user.",
   "recommendation_notes": "User states Interfolio supported; not yet independently verified.",
   "local_dossier_status": "created",
   "registration_status": "authenticated_existing_application_verified",
   "portal_application_created": true,
   "application_submitted": false,
-  "blocking_items": [],
-  "next_action": "Complete remaining application sections after initial account and draft setup.",
-  "latest_progress": "Verified existing Fall 2027 EECS - Computer Science MS/PhD draft, In Progress. User completed login. Program and term preserved.",
+  "blocking_items": [
+    "Institution entries require transcripts; uploads remain paused.",
+    "All community-college histories are non-degree coursework; await transcripts for dates/GPA and exact institution names.",
+    "Final EE/CS division, research/faculty preferences, statements and recommendations incomplete."
+  ],
+  "next_action": "Wait for transcripts; extract confirmed attendance terms and course-only education records. Continue materials only within user upload instruction.",
+  "latest_progress": "Reauthenticated existing account. Saved and revisited Supporting Materials: HackMIT Modal Sponsor Prize (2025), Smartest AI Agent (2024), and https://yuanbopang.pro.",
   "active_scope": true,
   "date_of_birth_provided": true,
   "account_exists": true,
@@ -26,5 +30,24 @@
   "application_origin": "pre_existing",
   "portal_application_started_display": "10/21/2026",
   "confirmed_portal_program": "EECS - Computer Science MS/PhD",
-  "confirmed_portal_entry": "Fall 2027"
+  "confirmed_portal_entry": "Fall 2027",
+  "advisor_comparison_file": "advisors_comparison.md",
+  "progress_updated_on": "2026-11-21",
+  "saved_form_progress": [
+    "Legal name, primary phone, mailing address, China citizenship and China/Nanjing birthplace saved.",
+    "Current and expected F-1 saved; California tuition-residency No based on F-1 rule.",
+    "Parents both Masters saved; major GPA 3.811 and native language Mandarin saved.",
+    "Three research appointments saved: RDI/BAIR September 2025–present, 28h/week; Tomizuka August 2026–present, 5h/week; Zakhor March 2026–present, 8h/week."
+  ],
+  "uploads_on_hold_by_user": true,
+  "recommendation_invitations_sent": false,
+  "progress_report": "../form-progress-2026-11-21.md",
+  "confirmed_profile_updates": "../confirmed-profile-updates-2026-11-21.json",
+  "latest_saved_update": [
+    "Reauthenticated existing account.",
+    "Saved and revisited Supporting Materials: HackMIT Modal Sponsor Prize (2025), Smartest AI Agent (2024), and https://yuanbopang.pro."
+  ],
+  "login_status": "authenticated_verified_2026-11-21_latest_pass",
+  "permanent_address_location": "San Jose",
+  "reviewed_transcript_data": "../transcripts-reviewed-2026-11-21.json"
 }

@@ -17,7 +17,7 @@ did around me.
 
 ## Part 1 · ALE V1 — what I contributed
 
-*Agents' Last Exam*, arXiv:2606.05405, under review at NeurIPS 2026.
+*Agents' Last Exam*, arXiv:2606.05405, accepted to NeurIPS 2026.
 One of 5 co-first authors. #1 Paper of the Week, Hugging Face Daily Papers.
 
 Within the V1 team, I owned:
@@ -54,7 +54,8 @@ progress dashboard I built tracking each application through the pipeline.
 On the infrastructure side, I set up a dedicated transpacific link that
 moves capture and build workloads onto low-cost machines, cutting our GCP
 server costs by roughly 30×.
-The pipeline has collected 130K+ cases across 76 professional applications;
+The pipeline spans 80+ open-source and proprietary applications across 20
+domains (CAD, structural simulation, 3D animation, circuit design);
 pilot evaluation: 22 bundles across six applications (~17K case
 occurrences), where a frontier agent reaches 34.8% with zero fully passing
 bundles.
@@ -82,10 +83,12 @@ calibrating difficulty, and QC before a task ships.
 
 ## Outputs
 
-- *Agents' Last Exam* — co-first author; NeurIPS 2026 under review; HF #1 of
+- *Agents' Last Exam* — co-first author; accepted to NeurIPS 2026; HF #1 of
   the week.
 - *Software Last Exam* — **first author**; CVPR 2027 under review.
-- *Agent's GameDev Exam* — 2nd author; ICLR 2027 under review.
+- *Agent's GameDev Exam* — 2nd author; under review.
+- *Agents' Last Exam for Media (ALE-MEDIA)* — core contributor; under review,
+  CVPR 2027.
 - *ScienceIDE* (arXiv:2609.19134) — co-author; HF #2 of the day.
 
 ## Themes the letter could speak to (suggestions only)

@@ -16,14 +16,44 @@
   "registration_status": "authenticated_application_created",
   "portal_application_created": true,
   "application_submitted": false,
-  "blocking_items": [],
-  "next_action": "Complete remaining application sections after initial account and draft setup.",
-  "latest_progress": "Created Graduate Admissions draft; selected and saved Electrical Engineering and Computer Science after user explicitly authorized Instructions acknowledgement. Advanced to Personal Background. Home confirms In Progress. First research interest and advisors remain blank; full application requires personal background details.",
+  "blocking_items": [
+    "Full education history pending transcripts; all community colleges are non-degree coursework.",
+    "Academic Areas of Concern remains unanswered (distinct from disciplinary history).",
+    "Research/faculty preferences, verified publications, teaching details, materials and recommendations incomplete.",
+    "Valid ELP scores or approved waiver required; waiver request deadline 2026-11-25."
+  ],
+  "next_action": "Wait for transcripts; extract confirmed attendance terms and course-only education records. Continue materials only within user upload instruction.",
+  "latest_progress": "User confirmed U.S. study began September 2023. This meets the stated three-year-duration criterion as of November 2026, subject to documentation and department approval. Opened ELP waiver form for 2027 Course 6 EECS. Selected currently enrolled in a three- or four-year degree program at an English-speaking institution; this reveals required Medium of Instruction PDF upload. No upload, policy attestation or waiver submission performed. Waiver deadline November 25, 2026; allow five business days; incomplete requests not reviewed. Approval or valid self-reported ELP scores required by application deadline.",
   "active_scope": true,
   "date_of_birth_provided": true,
   "account_exists": true,
   "account_activated": true,
   "application_origin": "created_this_session",
   "portal_application_started_display": "11/21/2026",
-  "confirmed_portal_program": "Electrical Engineering and Computer Science"
+  "confirmed_portal_program": "Electrical Engineering and Computer Science",
+  "progress_updated_on": "2026-11-21",
+  "saved_form_progress": [
+    "Daytime phone, mailing address, China birth country/citizenship, Chinese primary language and non-permanent-resident status saved.",
+    "Berkeley bachelor record saved: August 2025–December 2026, GPA 3.762/4.0, English instruction. No transcript uploaded.",
+    "RDI / BAIR Research Assistant, September 2025–present, saved under Resume/Employment.",
+    "RDI/BAIR, Tomizuka and Zakhor research descriptions plus two HackMIT awards saved in Honors, Awards, and Publications."
+  ],
+  "uploads_on_hold_by_user": true,
+  "recommendation_invitations_sent": false,
+  "progress_report": "../form-progress-2026-11-21.md",
+  "education_major_mapping": "Portal lacks exact EECS label; selected Electrical and Computer Engineering as closest listed major.",
+  "confirmed_profile_updates": "../confirmed-profile-updates-2026-11-21.json",
+  "latest_saved_update": [
+    "User confirmed U.S. study began September 2023. This meets the stated three-year-duration criterion as of November 2026, subject to documentation and department approval.",
+    "Opened ELP waiver form for 2027 Course 6 EECS. Selected currently enrolled in a three- or four-year degree program at an English-speaking institution; this reveals required Medium of Instruction PDF upload. No upload, policy attestation or waiver submission performed.",
+    "Waiver deadline November 25, 2026; allow five business days; incomplete requests not reviewed. Approval or valid self-reported ELP scores required by application deadline."
+  ],
+  "login_status": "authenticated_verified_2026-11-21_latest_pass",
+  "permanent_address_location": "San Jose",
+  "elp_waiver_deadline": "2026-11-25",
+  "us_study_start_confirmed": "2023-09",
+  "elp_waiver_status": "form_open_documentation_missing_not_submitted",
+  "elp_required_document": "Medium of Instruction PDF from institution(s)",
+  "elp_waiver_review_business_days": 5,
+  "reviewed_transcript_data": "../transcripts-reviewed-2026-11-21.json"
 }

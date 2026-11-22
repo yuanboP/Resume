@@ -14,15 +14,40 @@
   "recommendation_notes": "Recommendation delivery rules not yet verified.",
   "local_dossier_status": "created",
   "registration_status": "authenticated_existing_application_verified",
-  "account_created": false,
   "portal_application_created": true,
   "application_submitted": false,
-  "blocking_items": [],
-  "next_action": "Complete registration after missing information arrives; applicant handles new password setup and email verification as needed. Then create Fall 2027 PhD application draft.",
-  "latest_progress": "Verified an existing 2027-28 Degree Seeking Application: Doctor of Philosophy in Computer Science - 2027, In Progress, started 10/09/2026. Not newly created in this session.",
+  "blocking_items": [
+    "Complete non-degree college history pending transcripts.",
+    "CS teaching/presentation essays need real examples; accepted-publication status pending.",
+    "Faculty preferences, materials and recommendations incomplete."
+  ],
+  "next_action": "Wait for transcripts; extract confirmed attendance terms and course-only education records. Continue materials only within user upload instruction.",
+  "latest_progress": "Saved and revisit-verified: applying for external fellowship No; awarded external fellowship to be used for graduate study No.",
   "active_scope": true,
   "date_of_birth_provided": true,
   "account_exists": true,
   "application_origin": "pre_existing",
-  "portal_application_started_display": "10/09/2026"
+  "portal_application_started_display": "10/09/2026",
+  "account_activated": true,
+  "program_choice_confirmed_by_user": "2026-11-21: retain Princeton CS and UW CSE.",
+  "progress_updated_on": "2026-11-21",
+  "saved_form_progress": [
+    "Birth country China saved. Existing phone/mailing address and other prefilled responses preserved.",
+    "Berkeley B.S. in progress saved: August 2025–December 2026, cumulative GPA 3.762/4.0. No transcript uploaded.",
+    "RDI / BAIR Research Assistant, September 2025–present, saved under Employment.",
+    "Existing primary language Mandarin preserved.",
+    "Parents education corrected to Post Graduate Degree for both.",
+    "RDI employment start month corrected to September 2025; Tomizuka appointment August 2026–present added. Two records displayed; Add Employer no longer available."
+  ],
+  "uploads_on_hold_by_user": true,
+  "recommendation_invitations_sent": false,
+  "progress_report": "../form-progress-2026-11-21.md",
+  "education_major_mapping": "Portal lacks exact EECS label; selected Computer Engineering as closest listed major; confirm during final review. Major GPA omitted because transcript-printing condition not established.",
+  "confirmed_profile_updates": "../confirmed-profile-updates-2026-11-21.json",
+  "latest_saved_update": [
+    "Saved and revisit-verified: applying for external fellowship No; awarded external fellowship to be used for graduate study No."
+  ],
+  "login_status": "authenticated_verified_2026-11-21_latest_pass",
+  "permanent_address_location": "Nanjing, Jiangsu 210028",
+  "reviewed_transcript_data": "../transcripts-reviewed-2026-11-21.json"
 }

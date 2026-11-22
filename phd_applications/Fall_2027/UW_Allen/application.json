@@ -10,15 +10,19 @@
   "deadline_date": "2026-12-15",
   "deadline_time": "23:59 America/Los_Angeles",
   "deadline_source": "https://www.cs.washington.edu/academics/graduate/phd-program/phd-admissions/",
-  "notes": "Official current department page says December 15 or next business day; December 15, 2026 is Tuesday. Confirm Fall 2027 term inside portal.",
+  "notes": "Seattle Allen School CSE PhD Autumn 2027 and deadline verified in portal; user explicitly confirmed retaining CSE.",
   "recommendation_notes": "Recommendation delivery rules not yet verified.",
   "local_dossier_status": "created",
   "registration_status": "authenticated_application_created",
   "portal_application_created": true,
   "application_submitted": false,
-  "blocking_items": [],
-  "next_action": "Complete remaining application sections after initial account and draft setup.",
-  "latest_progress": "Created and saved Computer Science & Engineering - PhD - AUT27, Seattle campus, In Progress. Program requirements verify December 15, 2026 11:59 PM PT. Research interests, faculty, and materials remain to be completed.",
+  "blocking_items": [
+    "Complete non-degree college history pending transcripts.",
+    "Phone type and ranked research/faculty preferences remain blank.",
+    "SOP/CV, materials and recommendations incomplete."
+  ],
+  "next_action": "Wait for transcripts; extract confirmed attendance terms and course-only education records. Continue materials only within user upload instruction.",
+  "latest_progress": "Reauthenticated existing account. Found research keywords, summary and awards empty despite earlier report. Native input and native save succeeded; reopening verified all three persisted.",
   "active_scope": true,
   "date_of_birth_provided": true,
   "account_exists": true,
@@ -27,5 +31,27 @@
   "portal_application_started_display": "11/21/2026",
   "confirmed_portal_program": "Computer Science & Engineering - PhD",
   "confirmed_portal_entry": "Autumn 2027",
-  "portal_application_id": "690725111"
+  "portal_application_id": "690725111",
+  "program_choice_confirmed_by_user": "2026-11-21: retain Princeton CS and UW CSE.",
+  "progress_updated_on": "2026-11-21",
+  "saved_form_progress": [
+    "Non-native English speaker, China citizenship, China/Nanjing birthplace and expected F-1 saved.",
+    "Mailing address and primary phone saved.",
+    "Berkeley B.S. EECS saved: August 2025–December 2026; GPA rounded to 3.76 because 3.762 was rejected by field format. No transcript uploaded.",
+    "Research keywords, 300-character research summary and two HackMIT awards saved.",
+    "English proficiency route U.S. Degree selected and saved; full-duration U.S. residence confirmation still blank.",
+    "Current F-1 and both parents Masters saved and verified on revisit.",
+    "U.S.-degree English proficiency full-duration U.S. residence requirement selected after user confirmation and saved."
+  ],
+  "uploads_on_hold_by_user": true,
+  "recommendation_invitations_sent": false,
+  "progress_report": "../form-progress-2026-11-21.md",
+  "confirmed_profile_updates": "../confirmed-profile-updates-2026-11-21.json",
+  "latest_saved_update": [
+    "Reauthenticated existing account.",
+    "Found research keywords, summary and awards empty despite earlier report. Native input and native save succeeded; reopening verified all three persisted."
+  ],
+  "login_status": "authenticated_verified_2026-11-21_latest_pass",
+  "permanent_address_location": "San Jose",
+  "reviewed_transcript_data": "../transcripts-reviewed-2026-11-21.json"
 }
