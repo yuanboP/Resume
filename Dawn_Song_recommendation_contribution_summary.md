@@ -74,8 +74,8 @@ programmatic verification of the predicted structures. I contribute to the
 task specification and the verification design.
 
 **Game.**
-2nd author of *Agent's GameDev Exam* (under review, ICLR 2027): agent
-evaluation in game-development environments.
+Agent evaluation in game-development environments (the *GameDev Exam* work;
+the ICLR submission was withdrawn).
 
 Across tracks, I work within the same end-to-end loop I built for V1:
 turning expert workflows into executable task specs, building graders,
@@ -86,7 +86,6 @@ calibrating difficulty, and QC before a task ships.
 - *Agents' Last Exam* — co-first author; accepted to NeurIPS 2026; HF #1 of
   the week.
 - *Software Last Exam* — **first author**; CVPR 2027 under review.
-- *Agent's GameDev Exam* — 2nd author; under review.
 - *Agents' Last Exam for Media (ALE-MEDIA)* — core contributor; under review,
   CVPR 2027.
 - *ScienceIDE* (arXiv:2609.19134) — co-author; HF #2 of the day.
